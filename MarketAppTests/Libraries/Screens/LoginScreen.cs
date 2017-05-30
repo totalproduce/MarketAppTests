@@ -20,6 +20,8 @@ namespace MarketAppTests.Libraries.Screens
         private WindowsElement Pin => windowsDriver.FindElementByAccessibilityId("txtPassword");
         private WindowsElement RollbackWeeks => windowsDriver.FindElementByAccessibilityId("txtRollbackWeeks");
         private WindowsElement Login => windowsDriver.FindElementByName("Login");
+        // workaround for the DB update message
+        private WindowsElement Close => windowsDriver.FindElementByName("Close");
         
         public LoginScreen(WindowsDriver<WindowsElement> windowsDriver)
         {
@@ -28,15 +30,17 @@ namespace MarketAppTests.Libraries.Screens
 
         public void LoginWithDefaultUser()
         {
-            SalesOffice.Click();
-            DefaultSalesOffice.Click();
-            Username.Click();
-            DefaultUsername.Click(); // it's not clicking on the username. added a second click and it works
-            DefaultUsername.Click(); // to be checked why some of the clicks are missing
-            Salesman.Click();
-            DefaultSalesman.Click();
+            // workaround for the DB update message
+            Close.Click();
+            //SalesOffice.Click();
+            //DefaultSalesOffice.Click();
+            //Username.Click();
+            //DefaultUsername.Click(); // it's not clicking on the username. added a second click and it works
+            //DefaultUsername.Click(); // to be checked why some of the clicks are missing
+            //Salesman.Click();
+            //DefaultSalesman.Click();
             Pin.SendKeys(DefaultPin);
-            RollbackWeeks.SendKeys(DefaultRollbackWeeks);
+            //RollbackWeeks.SendKeys(DefaultRollbackWeeks);
             Login.Click();
         }
     }
