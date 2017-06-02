@@ -72,11 +72,11 @@ this.ScenarioSetup(scenarioInfo);
 #line 5
 testRunner.Given("I am a registered user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 6
-testRunner.When("I click on \"Create Ticket\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click on \"Create New Ticket\" button from SideBar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 7
 testRunner.And("I select a customer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 8
-testRunner.And("I click on \"New Line\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I click on \"New Line\" button from NewTicketScreen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }

@@ -1,18 +1,15 @@
 ﻿using MarketAppTests.Libraries.Screens;
 using NUnit.Framework;
-using OpenQA.Selenium;
 using OpenQA.Selenium.Appium.Windows;
 using OpenQA.Selenium.Appium.PageObjects;
-using OpenQA.Selenium.Support.PageObjects;
 using System;
 using TechTalk.SpecFlow;
 
 namespace MarketAppTests.Features.StepDefinition
 {
     [Binding]
-    public class NewTicketCreationSteps
+    public sealed class NewTicketCreationSteps
     {
-        //private readonly IWebDriver driver;
         private readonly WindowsDriver<WindowsElement> windowsDriver;
         private LoginScreen loginScreen;
 
@@ -32,6 +29,12 @@ namespace MarketAppTests.Features.StepDefinition
         public void WhenISelectACustomer()
         {
             // add screen methods here
+        }
+
+        [When(@"I click on ""(.*)"" button from NewTicketScreen")]
+        public void WhenIClickOnButtonFromNewTicketScreen(string p0)
+        {
+            
         }
     }
 }
