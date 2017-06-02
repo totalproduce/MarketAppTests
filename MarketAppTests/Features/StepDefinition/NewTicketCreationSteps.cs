@@ -14,6 +14,7 @@ namespace MarketAppTests.Features.StepDefinition
         private LoginScreen loginScreen;
         private SideBar sideBar;
         private NewTicketCreationScreen newTicketCreationScreen;
+        private ProductSelectionScreen productSelectionScreen;
 
         public NewTicketCreationSteps(WindowsDriver<WindowsElement> windowsDriver)
         {
@@ -48,11 +49,24 @@ namespace MarketAppTests.Features.StepDefinition
             newTicketCreationScreen.SelectDefaultDeliveryType();
         }
 
+        [When(@"I add a Email Address")]
+        public void WhenIAddAEmailAddress()
+        {
+            newTicketCreationScreen.AddDefaultEmail();
+        }
 
         [When(@"I click on ""(.*)"" button from New Ticket Creation Screen")]
         public void WhenIClickOnButtonFromNewTicketScreen(string buttonName)
         {
             newTicketCreationScreen.ClickOnButton(buttonName);
         }
+
+        [When(@"I select a random Product")]
+        public void WhenISelectARandomProduct()
+        {
+            productSelectionScreen = new ProductSelectionScreen(windowsDriver);
+            productSelectionScreen.SelectDefaultProductId();
+        }
+
     }
 }

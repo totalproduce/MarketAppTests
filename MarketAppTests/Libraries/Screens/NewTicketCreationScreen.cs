@@ -8,10 +8,14 @@ namespace MarketAppTests.Libraries.Screens
     {
         private readonly WindowsDriver<WindowsElement> windowsDriver;
 
+        private string DefaultEmail = "hcampos@totalproduce.com";
+
         private WindowsElement DefaultCustomerCode => windowsDriver.FindElementByName("18686");
-        private WindowsElement NewLineBtn => windowsDriver.FindElementByName("New Line");
-        private WindowsElement TypeCb => windowsDriver.FindElementByAccessibilityId("cbDeliveryType");
+        private WindowsElement NewLineButton => windowsDriver.FindElementByName("New Line");
+        private WindowsElement TypeComboBox => windowsDriver.FindElementByAccessibilityId("cbDeliveryType");
         private WindowsElement DefaultType => windowsDriver.FindElementByName("BOX");
+        private WindowsElement EmailCheckBox => windowsDriver.FindElementByAccessibilityId("chkCanEmail");
+        private WindowsElement EmailText => windowsDriver.FindElementByAccessibilityId("txtEmailAddress");
 
         public NewTicketCreationScreen(WindowsDriver<WindowsElement> windowsDriver)
         {
@@ -25,13 +29,19 @@ namespace MarketAppTests.Libraries.Screens
 
         public void SelectDefaultDeliveryType()
         {
-            TypeCb.Click();
+            TypeComboBox.Click();
             DefaultType.Click();
+        }
+
+        public void AddDefaultEmail()
+        {
+            EmailText.SendKeys(DefaultEmail);
+            EmailCheckBox.Click();
         }
 
         public void ClickOnButton(string buttonName)
         {
-            if (buttonName == "New Line") { NewLineBtn.Click(); }
+            if (buttonName == "New Line") { NewLineButton.Click(); }
             else throw new Exception("Element not found. Please check the name and try again.");
         }
     }

@@ -78,7 +78,11 @@ testRunner.And("I select a Customer", ((string)(null)), ((TechTalk.SpecFlow.Tabl
 #line 8
 testRunner.And("I select a Delivery Type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 9
+testRunner.And("I add a Email Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 10
 testRunner.And("I click on \"New Line\" button from New Ticket Creation Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 11
+testRunner.And("I select a random Product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
