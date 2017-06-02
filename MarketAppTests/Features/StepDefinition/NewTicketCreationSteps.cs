@@ -12,29 +12,47 @@ namespace MarketAppTests.Features.StepDefinition
     {
         private readonly WindowsDriver<WindowsElement> windowsDriver;
         private LoginScreen loginScreen;
+        private SideBar sideBar;
+        private NewTicketCreationScreen newTicketCreationScreen;
 
         public NewTicketCreationSteps(WindowsDriver<WindowsElement> windowsDriver)
         {
             this.windowsDriver = windowsDriver;
         }
 
-        [Given(@"I am a registered user")]
+        [Given(@"I am a Registered User")]
         public void GivenIAmARegisteredUser()
         {
             loginScreen = new LoginScreen(this.windowsDriver);
             loginScreen.LoginWithDefaultUser();
         }
-        
-        [When(@"I select a customer")]
-        public void WhenISelectACustomer()
+
+        [When(@"I click on ""(.*)"" button from SideBar")]
+        public void WhenIClickOnButton(string buttonName)
         {
-            // add screen methods here
+            sideBar = new SideBar(this.windowsDriver);
+            sideBar.ClickOnButton(buttonName);
         }
 
-        [When(@"I click on ""(.*)"" button from NewTicketScreen")]
-        public void WhenIClickOnButtonFromNewTicketScreen(string p0)
+        [When(@"I select a Customer")]
+        public void WhenISelectACustomer()
         {
+            newTicketCreationScreen = new NewTicketCreationScreen(this.windowsDriver);
+            newTicketCreationScreen.SelectDefaultCustomerById();
             
+        }
+
+        [When(@"I select a Delivery Type")]
+        public void WhenISelectADeliveryType()
+        {
+            newTicketCreationScreen.SelectDefaultDeliveryType();
+        }
+
+
+        [When(@"I click on ""(.*)"" button from New Ticket Creation Screen")]
+        public void WhenIClickOnButtonFromNewTicketScreen(string buttonName)
+        {
+            newTicketCreationScreen.ClickOnButton(buttonName);
         }
     }
 }

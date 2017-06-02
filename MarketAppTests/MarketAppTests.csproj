@@ -69,7 +69,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Features\StepDefinition\NavigationSteps.cs" />
     <Compile Include="Features\StepDefinition\NewTicketCreationSteps.cs" />
     <Compile Include="Features\Support\Hooks.cs" />
     <Compile Include="Features\NewTicketCreation.feature.cs">
@@ -78,7 +77,7 @@
       <DependentUpon>NewTicketCreation.feature</DependentUpon>
     </Compile>
     <Compile Include="Libraries\Screens\LoginScreen.cs" />
-    <Compile Include="Libraries\Screens\NewTicketScreen.cs" />
+    <Compile Include="Libraries\Screens\NewTicketCreationScreen.cs" />
     <Compile Include="Libraries\Screens\SideBar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

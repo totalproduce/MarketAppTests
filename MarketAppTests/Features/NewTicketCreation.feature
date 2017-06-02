@@ -2,7 +2,8 @@
 
 @newticketcreation
 Scenario: Create a new ticket
-Given I am a registered user
+Given I am a Registered User
 When I click on "Create New Ticket" button from SideBar
-And I select a customer
-And I click on "New Line" button from NewTicketScreen
+And I select a Customer
+And I select a Delivery Type
+And I click on "New Line" button from New Ticket Creation Screen
