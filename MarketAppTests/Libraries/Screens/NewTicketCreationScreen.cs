@@ -6,7 +6,7 @@ namespace MarketAppTests.Libraries.Screens
 {
     class NewTicketCreationScreen
     {
-        private readonly WindowsDriver<WindowsElement> windowsDriver;
+        private WindowsDriver<WindowsElement> windowsDriver;
 
         private string DefaultEmail = "hcampos@totalproduce.com";
 

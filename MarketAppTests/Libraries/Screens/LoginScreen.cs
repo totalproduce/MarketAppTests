@@ -6,7 +6,7 @@ namespace MarketAppTests.Libraries.Screens
 {
     public class LoginScreen
     {
-        private readonly WindowsDriver<WindowsElement> windowsDriver;
+        private WindowsDriver<WindowsElement> windowsDriver;
 
         private string DefaultPin = "1234";
         private string DefaultRollbackWeeks = "10";
@@ -16,10 +16,11 @@ namespace MarketAppTests.Libraries.Screens
         private WindowsElement Username => windowsDriver.FindElementByAccessibilityId("cbLogons");
         private WindowsElement DefaultUsername => windowsDriver.FindElementByName("KMCKAY");
         private WindowsElement Salesman => windowsDriver.FindElementByAccessibilityId("cbSalesmen");
-        private WindowsElement DefaultSalesman => windowsDriver.FindElementByName("Billy O'Brien");
+        private WindowsElement DefaultSalesman => windowsDriver.FindElementByName("Billy O\'Brien");
         private WindowsElement Pin => windowsDriver.FindElementByAccessibilityId("txtPassword");
         private WindowsElement RollbackWeeks => windowsDriver.FindElementByAccessibilityId("txtRollbackWeeks");
         private WindowsElement Login => windowsDriver.FindElementByName("Login");
+        //private WindowsElement Login => windowsDriver.FindElementByXPath("//Button[@Name='Login']");
 
         public LoginScreen(WindowsDriver<WindowsElement> windowsDriver)
         {

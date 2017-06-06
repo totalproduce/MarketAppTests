@@ -6,10 +6,10 @@ namespace MarketAppTests.Libraries.Screens
 {
     class ProductSelectionScreen
     {
-        private readonly WindowsDriver<WindowsElement> windowsDriver;
+        private WindowsDriver<WindowsElement> windowsDriver;
 
         private WindowsElement DefaultProductId => windowsDriver.FindElementByName("APG");
-        private WindowsElement StockLinesList => windowsDriver.FindElementByName("TotalProduce.MarketApp.Models.HH_StockLine");
+        private WindowsElement StockLinesList => windowsDriver.FindElementByXPath("//List[@AutomationId=\'lstStocklines\']/ListItem[@ClassName=\'ListViewItem\'][1]/*[@ClassName=\'TextBox\'][1]");
 
         public ProductSelectionScreen(WindowsDriver<WindowsElement> windowsDriver)
         {
@@ -19,6 +19,7 @@ namespace MarketAppTests.Libraries.Screens
         public void SelectDefaultProductId()
         {
             DefaultProductId.Click();
+            StockLinesList.SendKeys("1234");
         }
     }
 }

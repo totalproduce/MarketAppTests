@@ -7,7 +7,7 @@ namespace MarketAppTests.Libraries.Screens
 {
     class SideBar
     {
-        private readonly WindowsDriver<WindowsElement> windowsDriver;
+        private WindowsDriver<WindowsElement> windowsDriver;
 
         private WindowsElement CreateNewTicketButton => windowsDriver.FindElementByAccessibilityId("mnuTicket");
 

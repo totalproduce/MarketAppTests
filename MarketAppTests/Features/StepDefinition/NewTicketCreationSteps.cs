@@ -10,7 +10,7 @@ namespace MarketAppTests.Features.StepDefinition
     [Binding]
     public sealed class NewTicketCreationSteps
     {
-        private readonly WindowsDriver<WindowsElement> windowsDriver;
+        private WindowsDriver<WindowsElement> windowsDriver;
         private LoginScreen loginScreen;
         private SideBar sideBar;
         private NewTicketCreationScreen newTicketCreationScreen;
