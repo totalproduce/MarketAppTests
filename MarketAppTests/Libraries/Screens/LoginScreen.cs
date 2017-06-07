@@ -20,7 +20,6 @@ namespace MarketAppTests.Libraries.Screens
         private WindowsElement Pin => windowsDriver.FindElementByAccessibilityId("txtPassword");
         private WindowsElement RollbackWeeks => windowsDriver.FindElementByAccessibilityId("txtRollbackWeeks");
         private WindowsElement Login => windowsDriver.FindElementByName("Login");
-        //private WindowsElement Login => windowsDriver.FindElementByXPath("//Button[@Name='Login']");
 
         public LoginScreen(WindowsDriver<WindowsElement> windowsDriver)
         {
