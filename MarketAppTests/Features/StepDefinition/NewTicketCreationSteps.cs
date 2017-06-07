@@ -1,5 +1,5 @@
 ﻿using MarketAppTests.Libraries.Screens;
-using NUnit.Framework;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium.Appium.Windows;
 using OpenQA.Selenium.Appium.PageObjects;
 using System;
@@ -74,7 +74,5 @@ namespace MarketAppTests.Features.StepDefinition
         {
             productSelectionScreen.EnterSellPrice(sellPrice);
         }
-
-
     }
 }
