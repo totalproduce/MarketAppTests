@@ -61,12 +61,20 @@ namespace MarketAppTests.Features.StepDefinition
             newTicketCreationScreen.ClickOnButton(buttonName);
         }
 
-        [When(@"I select a random Product")]
-        public void WhenISelectARandomProduct()
+        [When(@"I allocate ""(.*)"" boxes of apples")]
+        public void WhenIAllocateBoxesOfApples(int quantity)
         {
             productSelectionScreen = new ProductSelectionScreen(windowsDriver);
             productSelectionScreen.SelectDefaultProductId();
+            productSelectionScreen.EnterAllocQty(quantity);
         }
+
+        [When(@"I enter ""(.*)"" as new sell price")]
+        public void WhenIEnterAsNewSellPrice(int sellPrice)
+        {
+            productSelectionScreen.EnterSellPrice(sellPrice);
+        }
+
 
     }
 }

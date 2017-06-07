@@ -82,7 +82,9 @@ testRunner.And("I add a Email Address", ((string)(null)), ((TechTalk.SpecFlow.Ta
 #line 10
 testRunner.And("I click on \"New Line\" button from New Ticket Creation Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 11
-testRunner.And("I select a random Product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I allocate \"20\" boxes of apples", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 12
+testRunner.And("I enter \"15\" as new sell price", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
