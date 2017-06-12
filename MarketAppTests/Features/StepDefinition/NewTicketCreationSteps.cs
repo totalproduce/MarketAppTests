@@ -26,21 +26,20 @@ namespace MarketAppTests.Features.StepDefinition
         {
             loginScreen = new LoginScreen(this.windowsDriver);
             loginScreen.LoginWithDefaultUser();
+            sideBar = new SideBar(this.windowsDriver);
         }
 
         [When(@"I click on ""(.*)"" button from SideBar")]
         public void WhenIClickOnButton(string buttonName)
         {
-            sideBar = new SideBar(this.windowsDriver);
             sideBar.ClickOnButton(buttonName);
+            newTicketCreationScreen = new NewTicketCreationScreen(this.windowsDriver);
         }
 
         [When(@"I select a Customer")]
         public void WhenISelectACustomer()
         {
-            newTicketCreationScreen = new NewTicketCreationScreen(this.windowsDriver);
-            newTicketCreationScreen.SelectDefaultCustomerById();
-            
+            newTicketCreationScreen.SelectDefaultCustomerById();   
         }
 
         [When(@"I select a Delivery Type")]
@@ -59,12 +58,12 @@ namespace MarketAppTests.Features.StepDefinition
         public void WhenIClickOnButtonFromNewTicketScreen(string buttonName)
         {
             newTicketCreationScreen.ClickOnButton(buttonName);
+            productSelectionScreen = new ProductSelectionScreen(windowsDriver);
         }
 
         [When(@"I allocate ""(.*)"" boxes of apples")]
         public void WhenIAllocateBoxesOfApples(int quantity)
         {
-            productSelectionScreen = new ProductSelectionScreen(windowsDriver);
             productSelectionScreen.SelectDefaultProductId();
             productSelectionScreen.EnterAllocQty(quantity);
         }
@@ -73,6 +72,36 @@ namespace MarketAppTests.Features.StepDefinition
         public void WhenIEnterAsNewSellPrice(int sellPrice)
         {
             productSelectionScreen.EnterSellPrice(sellPrice);
+        }
+
+        [When(@"I click on ""(.*)"" button from Product Selection Screen")]
+        public void WhenIClickOnButtonFromProductSelectionScreen(string buttonName)
+        {
+            productSelectionScreen.ClickOnButton(buttonName);
+        }
+
+        [Then(@"I should see ""(.*)"" as Code on New Ticket Creation Screen")]
+        public void ThenIShouldSeeAsCodeOnNewTicketCreationScreen(string code)
+        {
+            //ScenarioContext.Current.Pending();
+        }
+
+        [Then(@"I should see ""(.*)"" as Quantity on New Ticket Creation Screen")]
+        public void ThenIShouldSeeAsQuantityOnNewTicketCreationScreen(int quantity)
+        {
+            //ScenarioContext.Current.Pending();
+        }
+
+        [Then(@"I should see ""(.*)"" as Unit Of Measurement on Ticket Creation Screen")]
+        public void ThenIShouldSeeAsUnitOfMeasurementOnTicketCreationScreen(string unit)
+        {
+            //ScenarioContext.Current.Pending();
+        }
+
+        [Then(@"I should see ""(.*)"" as Price on Ticket Creation Screen")]
+        public void ThenIShouldSeeAsPriceOnTicketCreationScreen(int price)
+        {
+            //ScenarioContext.Current.Pending();
         }
     }
 }

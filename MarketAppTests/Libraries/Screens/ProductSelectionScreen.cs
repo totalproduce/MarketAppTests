@@ -10,6 +10,7 @@ namespace MarketAppTests.Libraries.Screens
 
         private WindowsElement AllocQtyStockLine(int line) => windowsDriver.FindElementByXPath($"//List[@AutomationId=\'lstStocklines\']/ListItem[@ClassName=\'ListViewItem\'][{line}]/*[@ClassName=\'TextBox\'][1]");
         private WindowsElement BuyPriceStockLine(int line) => windowsDriver.FindElementByXPath($"//List[@AutomationId=\'lstStocklines\']/ListItem[@ClassName=\'ListViewItem\'][{line}]/*[@ClassName=\'TextBlock\'][8]");
+        private WindowsElement ContinueButton => windowsDriver.FindElementByName("Continue");
         private WindowsElement DefaultProductId => windowsDriver.FindElementByName("APG");
         private WindowsElement LineStockLine(int line) => windowsDriver.FindElementByXPath($"//List[@AutomationId=\'lstStocklines\']/ListItem[@ClassName=\'ListViewItem\'][{line}]/*[@ClassName=\'TextBlock\'][1]");
         private WindowsElement SellPriceStockLine(int line) => windowsDriver.FindElementByXPath($"//List[@AutomationId=\'lstStocklines\']/ListItem[@ClassName=\'ListViewItem\'][{line}]/*[@ClassName=\'TextBox\'][2]");
@@ -20,6 +21,12 @@ namespace MarketAppTests.Libraries.Screens
         public ProductSelectionScreen(WindowsDriver<WindowsElement> windowsDriver)
         {
             this.windowsDriver = windowsDriver;
+        }
+
+        public void ClickOnButton(string buttonName)
+        {
+            if (buttonName == "Continue") { ContinueButton.Click(); }
+            else throw new Exception("Element not found. Please check the name and try again.");
         }
 
         public void SelectDefaultProductId()
@@ -48,7 +55,7 @@ namespace MarketAppTests.Libraries.Screens
 
         private int TotalStockLines()
         {
-            int totalStockLines = 1;
+            int totalStockLines = 0;
             do { totalStockLines++; } while (LineStockLine(totalStockLines).Text != "-1");
             return totalStockLines;
         }

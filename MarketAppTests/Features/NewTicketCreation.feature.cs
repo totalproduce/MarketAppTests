@@ -85,6 +85,18 @@ testRunner.And("I click on \"New Line\" button from New Ticket Creation Screen",
 testRunner.And("I allocate \"20\" boxes of apples", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 12
 testRunner.And("I enter \"15\" as new sell price", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 13
+testRunner.And("I click on \"Continue\" button from Product Selection Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 14
+testRunner.And("I click on \"Commit\" button from New Ticket Creation Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 15
+testRunner.Then("I should see \"APG\" as Code on New Ticket Creation Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 16
+testRunner.And("I should see \"20\" as Quantity on New Ticket Creation Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 17
+testRunner.And("I should see \"Box\" as Unit Of Measurement on Ticket Creation Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 18
+testRunner.And("I should see \"15\" as Price on Ticket Creation Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }

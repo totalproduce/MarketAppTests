@@ -12,6 +12,7 @@ namespace MarketAppTests.Libraries.Screens
 
         private WindowsElement DefaultCustomerCode => windowsDriver.FindElementByName("18686");
         private WindowsElement NewLineButton => windowsDriver.FindElementByName("New Line");
+        private WindowsElement CommitButton => windowsDriver.FindElementByName("Commit");
         private WindowsElement TypeComboBox => windowsDriver.FindElementByAccessibilityId("cbDeliveryType");
         private WindowsElement DefaultType => windowsDriver.FindElementByName("BOX");
         private WindowsElement EmailCheckBox => windowsDriver.FindElementByAccessibilityId("chkCanEmail");
@@ -42,6 +43,7 @@ namespace MarketAppTests.Libraries.Screens
         public void ClickOnButton(string buttonName)
         {
             if (buttonName == "New Line") { NewLineButton.Click(); }
+            else if (buttonName == "Commit") { CommitButton.Click(); }
             else throw new Exception("Element not found. Please check the name and try again.");
         }
     }
