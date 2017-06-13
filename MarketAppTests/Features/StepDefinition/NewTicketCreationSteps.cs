@@ -78,30 +78,31 @@ namespace MarketAppTests.Features.StepDefinition
         public void WhenIClickOnButtonFromProductSelectionScreen(string buttonName)
         {
             productSelectionScreen.ClickOnButton(buttonName);
+            newTicketCreationScreen = new NewTicketCreationScreen(this.windowsDriver);
         }
 
         [Then(@"I should see ""(.*)"" as Code on New Ticket Creation Screen")]
         public void ThenIShouldSeeAsCodeOnNewTicketCreationScreen(string code)
         {
-            //ScenarioContext.Current.Pending();
+            Assert.AreEqual(code, newTicketCreationScreen.GetCodeTicketLine());
         }
 
         [Then(@"I should see ""(.*)"" as Quantity on New Ticket Creation Screen")]
-        public void ThenIShouldSeeAsQuantityOnNewTicketCreationScreen(int quantity)
+        public void ThenIShouldSeeAsQuantityOnNewTicketCreationScreen(string quantity)
         {
-            //ScenarioContext.Current.Pending();
+            Assert.AreEqual(quantity, newTicketCreationScreen.GetQtyTicketLine());
         }
 
         [Then(@"I should see ""(.*)"" as Unit Of Measurement on Ticket Creation Screen")]
         public void ThenIShouldSeeAsUnitOfMeasurementOnTicketCreationScreen(string unit)
         {
-            //ScenarioContext.Current.Pending();
+            Assert.AreEqual(unit, newTicketCreationScreen.GetUomTicketLine());
         }
 
         [Then(@"I should see ""(.*)"" as Price on Ticket Creation Screen")]
-        public void ThenIShouldSeeAsPriceOnTicketCreationScreen(int price)
+        public void ThenIShouldSeeAsPriceOnTicketCreationScreen(string price)
         {
-            //ScenarioContext.Current.Pending();
+            Assert.AreEqual(price, newTicketCreationScreen.GetPriceTicketLine());
         }
     }
 }
