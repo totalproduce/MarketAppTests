@@ -1,6 +1,6 @@
 @pushd %~dp0
 
-%windir%\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe "MarketAppTests.csproj"
+%windir%\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe "MarketAppTests.csproj" /p:Configuration=Debug
 
 @if ERRORLEVEL 1 goto end
 
