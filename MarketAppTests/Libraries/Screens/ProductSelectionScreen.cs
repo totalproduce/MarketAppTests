@@ -36,7 +36,7 @@ namespace MarketAppTests.Libraries.Screens
 
         public void EnterAllocQty(int quantity)
         {
-            do { System.Threading.Thread.Sleep(TimeSpan.FromMilliseconds(500)); } while (AllocQtyStockLine(1).Displayed is false);
+            do { System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1)); } while (StockStockLine(1).Displayed is false);
             CurrentStockLine = LineWithStockGreaterThan(quantity);
             AllocQtyStockLine(CurrentStockLine).SendKeys(quantity.ToString());
         }
@@ -49,7 +49,7 @@ namespace MarketAppTests.Libraries.Screens
         private int LineWithStockGreaterThan(int quantity)
         {
             int line = 0;
-            do { line++; } while (Int32.Parse(StockStockLine(line).Text) <= quantity);
+            do { line++; } while (Int32.Parse(StockStockLine(line).Text) < quantity);
             return line;
         }
 

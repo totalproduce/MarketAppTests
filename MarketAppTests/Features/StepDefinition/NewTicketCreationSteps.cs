@@ -78,30 +78,97 @@ namespace MarketAppTests.Features.StepDefinition
         public void WhenIClickOnButtonFromProductSelectionScreen(string buttonName)
         {
             productSelectionScreen.ClickOnButton(buttonName);
+            newTicketCreationScreen = new NewTicketCreationScreen(this.windowsDriver);
         }
 
         [Then(@"I should see ""(.*)"" as Code on New Ticket Creation Screen")]
         public void ThenIShouldSeeAsCodeOnNewTicketCreationScreen(string code)
         {
-            //ScenarioContext.Current.Pending();
+            Assert.AreEqual(code, newTicketCreationScreen.GetCodeTicketLine());
         }
 
         [Then(@"I should see ""(.*)"" as Quantity on New Ticket Creation Screen")]
-        public void ThenIShouldSeeAsQuantityOnNewTicketCreationScreen(int quantity)
+        public void ThenIShouldSeeAsQuantityOnNewTicketCreationScreen(string quantity)
         {
-            //ScenarioContext.Current.Pending();
+            Assert.AreEqual(quantity, newTicketCreationScreen.GetQtyTicketLine());
         }
 
         [Then(@"I should see ""(.*)"" as Unit Of Measurement on Ticket Creation Screen")]
         public void ThenIShouldSeeAsUnitOfMeasurementOnTicketCreationScreen(string unit)
         {
-            //ScenarioContext.Current.Pending();
+            Assert.AreEqual(unit, newTicketCreationScreen.GetUomTicketLine());
         }
 
         [Then(@"I should see ""(.*)"" as Price on Ticket Creation Screen")]
-        public void ThenIShouldSeeAsPriceOnTicketCreationScreen(int price)
+        public void ThenIShouldSeeAsPriceOnTicketCreationScreen(string price)
         {
-            //ScenarioContext.Current.Pending();
+            Assert.AreEqual(price, newTicketCreationScreen.GetPriceTicketLine());
+        }
+
+        [When(@"I select the Customer with Id ""(.*)""")]
+        public void WhenISelectTheCustomerWithId(int p0)
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [When(@"I add ""(.*)"" as a Comment")]
+        public void WhenIAddAsAComment(string p0)
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [When(@"I enter ""(.*)"" into the Product field and click on the Product Name")]
+        public void WhenIEnterIntoTheProductFieldAndClickOnTheProductName(string p0)
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [Then(@"I should see ""(.*)"" as Product Name")]
+        public void ThenIShouldSeeAsProductName(string p0)
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [When(@"I enter ""(.*)"" as Quantity")]
+        public void WhenIEnterAsQuantity(int p0)
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [When(@"I select ""(.*)"" from Product Selection Screen")]
+        public void WhenISelectFromProductSelectionScreen(string p0)
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [When(@"I enter ""(.*)"" as New Sell Price")]
+        public void WhenIEnterAsNewSellPrice(Decimal p0)
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [Then(@"I should see ""(.*)"" as Code on line ""(.*)"" on New Ticket Creation Screen")]
+        public void ThenIShouldSeeAsCodeOnLineOnNewTicketCreationScreen(string p0, int p1)
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [Then(@"I should see ""(.*)"" as Quantity on line ""(.*)"" on New Ticket Creation Screen")]
+        public void ThenIShouldSeeAsQuantityOnLineOnNewTicketCreationScreen(int p0, int p1)
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [Then(@"I should see ""(.*)"" as Unit Of Measurement on line ""(.*)"" on Ticket Creation Screen")]
+        public void ThenIShouldSeeAsUnitOfMeasurementOnLineOnTicketCreationScreen(string p0, int p1)
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [Then(@"I should see ""(.*)"" as Price on line ""(.*)"" on Ticket Creation Screen")]
+        public void ThenIShouldSeeAsPriceOnLineOnTicketCreationScreen(int p0, int p1)
+        {
+            ScenarioContext.Current.Pending();
         }
     }
 }
