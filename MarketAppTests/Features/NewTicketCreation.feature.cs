@@ -96,7 +96,7 @@ testRunner.And("I should see \"3\" as Quantity on New Ticket Creation Screen", (
 #line 17
 testRunner.And("I should see \"Box\" as Unit Of Measurement on Ticket Creation Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 18
-testRunner.And("I should see \"15\" as Price on Ticket Creation Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I should see \"15.00\" as Price on Ticket Creation Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }

@@ -26,7 +26,7 @@ namespace MarketAppTests.Libraries.Screens
         public void ClickOnButton(string buttonName)
         {
             if (buttonName == "Continue") { ContinueButton.Click(); }
-            else throw new Exception("Element not found. Please check the name and try again.");
+            else throw new Exception($"{buttonName} button not found. Please check the button name and try again.");
         }
 
         public void SelectDefaultProductId()
