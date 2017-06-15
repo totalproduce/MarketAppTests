@@ -106,16 +106,24 @@ namespace MarketAppTests.Features.StepDefinition
         }
 
         [When(@"I select the Customer with Id ""(.*)""")]
-        public void WhenISelectTheCustomerWithId(int p0)
+        public void WhenISelectTheCustomerWithId(string text)
         {
-            ScenarioContext.Current.Pending();
+            newTicketCreationScreen.EnterCustomerText(text);
+            newTicketCreationScreen.SelectCustomerById(text);
         }
 
         [When(@"I add ""(.*)"" as a Comment")]
-        public void WhenIAddAsAComment(string p0)
+        public void WhenIAddAsAComment(string text)
         {
-            ScenarioContext.Current.Pending();
+            newTicketCreationScreen.EnterCommentText(text);
         }
+
+        [When(@"I select ""(.*)"" as Type")]
+        public void WhenISelectAsType(string type)
+        {
+            newTicketCreationScreen.SelectType(type);
+        }
+
 
         [When(@"I enter ""(.*)"" into the Product field and click on the Product Name")]
         public void WhenIEnterIntoTheProductFieldAndClickOnTheProductName(string p0)

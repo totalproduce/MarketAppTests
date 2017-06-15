@@ -61,11 +61,11 @@ namespace MarketAppTests.Features
             testRunner.CollectScenarioErrors();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Create a new ticket", new string[] {
+        [TechTalk.SpecRun.ScenarioAttribute("Create New ticket", new string[] {
                 "CreateNewTicket"}, SourceLine=3)]
-        public virtual void CreateANewTicket()
+        public virtual void CreateNewTicket()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create a new ticket", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create New ticket", new string[] {
                         "CreateNewTicket"});
 #line 4
 this.ScenarioSetup(scenarioInfo);
@@ -116,61 +116,13 @@ testRunner.When("I click on \"Create New Ticket\" button from SideBar", ((string
 #line 24
 testRunner.And("I select the Customer with Id \"15999\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 25
-testRunner.And("I add \"Cash\" as a Comment", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I add \"Test Cash\" as a Comment", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 26
-testRunner.And("I click on \"New Line\" button from New Ticket Creation Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I select \"Box\" as Type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 27
-testRunner.And("I enter \"CABSA\" into the Product field and click on the Product Name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I click on \"New Line\" button from New Ticket Creation Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 28
-testRunner.Then("I should see \"CABBAGE SAVOY . . 2KG VAC PAC SHREDDED\" as Product Name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 29
-testRunner.When("I enter \"3\" as Quantity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 30
-testRunner.And("I enter \"10\" as New Sell Price", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 31
-testRunner.And("I click on \"Add More\" button from Product Selection Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 32
-testRunner.And("I enter \"xxxxx\" into the Product field and click on the Product Name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 33
-testRunner.Then("I should see \"xxxxx\" as Product Name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 34
-testRunner.When("I enter \"3\" as Quantity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 35
-testRunner.And("I enter \"10\" as New Sell Price", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 36
-testRunner.And("I click on \"Add More\" button from Product Selection Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 37
-testRunner.And("I enter \"ORA\" into the Product field and click on the Product Name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 38
-testRunner.And("I select \"Each\" from Product Selection Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 39
-testRunner.Then("I should see \"xxxxx\" as Product Name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 40
-testRunner.When("I enter \"30\" as Quantity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 41
-testRunner.And("I enter \"0.50\" as New Sell Price", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 42
-testRunner.And("I click on \"Add More\" button from Product Selection Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 43
-testRunner.And("I enter \"CAPR\" into the Product field and click on the Product Name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 44
-testRunner.Then("I should see \"xxxxx\" as Product Name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 45
-testRunner.When("I enter \"20\" as Quantity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 46
-testRunner.And("I enter \"0.65\" as New Sell Price", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 47
-testRunner.And("I click on \"Continue\" button from Product Selection Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 48
-testRunner.And("I click on \"Commit\" button from New Ticket Creation Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 49
-testRunner.Then("I should see \"CABSA\" as Code on line \"1\" on New Ticket Creation Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 50
-testRunner.And("I should see \"3\" as Quantity on line \"1\" on New Ticket Creation Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 51
-testRunner.And("I should see \"Box\" as Unit Of Measurement on line \"1\" on Ticket Creation Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 52
-testRunner.And("I should see \"10\" as Price on line \"1\" on Ticket Creation Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I enter \"CABSA\" into the Product field and click on the Product Name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
