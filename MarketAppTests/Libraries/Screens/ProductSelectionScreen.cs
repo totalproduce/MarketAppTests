@@ -13,6 +13,8 @@ namespace MarketAppTests.Libraries.Screens
         private WindowsElement ContinueButton => windowsDriver.FindElementByName("Continue");
         private WindowsElement DefaultProductId => windowsDriver.FindElementByName("APG");
         private WindowsElement LineStockLine(int line) => windowsDriver.FindElementByXPath($"//List[@AutomationId=\'lstStocklines\']/ListItem[@ClassName=\'ListViewItem\'][{line}]/*[@ClassName=\'TextBlock\'][1]");
+        private WindowsElement ProductText => windowsDriver.FindElementByXPath("//*[@AutomationId=\'txtProductCodeSearch\']/*[@AutomationId=\'TextBox\'][1]");
+        private WindowsElement ProductByCode(string productCode) => windowsDriver.FindElementByName(productCode);
         private WindowsElement SellPriceStockLine(int line) => windowsDriver.FindElementByXPath($"//List[@AutomationId=\'lstStocklines\']/ListItem[@ClassName=\'ListViewItem\'][{line}]/*[@ClassName=\'TextBox\'][2]");
         private WindowsElement StockStockLine(int line) => windowsDriver.FindElementByXPath($"//List[@AutomationId=\'lstStocklines\']/ListItem[@ClassName=\'ListViewItem\'][{line}]/*[@ClassName=\'TextBlock\'][7]");
 
@@ -32,6 +34,16 @@ namespace MarketAppTests.Libraries.Screens
         public void SelectDefaultProductId()
         {
             DefaultProductId.Click();
+        }
+
+        public void SelectProductCode(string productCode)
+        {
+            ProductByCode(productCode).Click();
+        }
+
+        public void EnterProductCodeText (string productCode)
+        {
+            ProductText.SendKeys(productCode);
         }
 
         public void EnterAllocQty(int quantity)

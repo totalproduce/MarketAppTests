@@ -122,7 +122,9 @@ testRunner.And("I select \"Box\" as Type", ((string)(null)), ((TechTalk.SpecFlow
 #line 27
 testRunner.And("I click on \"New Line\" button from New Ticket Creation Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 28
-testRunner.And("I enter \"CABSA\" into the Product field and click on the Product Name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I search for Product with code \"CABSAV\" and select the Product from the list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 29
+testRunner.Then("I should see \"CABBAGE SAVOY . . 2KG VAC PAC SHREDDED\" as Product Name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

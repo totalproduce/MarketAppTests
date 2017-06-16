@@ -125,14 +125,16 @@ namespace MarketAppTests.Features.StepDefinition
         }
 
 
-        [When(@"I enter ""(.*)"" into the Product field and click on the Product Name")]
-        public void WhenIEnterIntoTheProductFieldAndClickOnTheProductName(string p0)
+        [When(@"I search for Product with code ""(.*)"" and select the Product from the list")]
+        public void WhenISearchForAndSelectTheProduct(string productCode)
         {
-            ScenarioContext.Current.Pending();
+            productSelectionScreen.EnterProductCodeText(productCode);
+            productSelectionScreen.SelectProductCode(productCode);
         }
 
+
         [Then(@"I should see ""(.*)"" as Product Name")]
-        public void ThenIShouldSeeAsProductName(string p0)
+        public void ThenIShouldSeeAsProductName(string productName)
         {
             ScenarioContext.Current.Pending();
         }

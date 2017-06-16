@@ -25,8 +25,8 @@ And I select the Customer with Id "15999"
 And I add "Test Cash" as a Comment
 And I select "Box" as Type
 And I click on "New Line" button from New Ticket Creation Screen
-And I enter "CABSA" into the Product field and click on the Product Name
-#Then I should see "CABBAGE SAVOY . . 2KG VAC PAC SHREDDED" as Product Name
+And I search for Product with code "CABSAV" and select the Product from the list
+Then I should see "CABBAGE SAVOY . . 2KG VAC PAC SHREDDED" as Product Name
 #When I enter "3" as Quantity
 #And I enter "10" as New Sell Price
 #And I click on "Add More" button from Product Selection Screen
