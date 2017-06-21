@@ -140,9 +140,9 @@ namespace MarketAppTests.Features.StepDefinition
         }
 
         [When(@"I select ""(.*)"" from Product Selection Screen")]
-        public void WhenISelectFromProductSelectionScreen(string p0)
+        public void WhenISelectFromProductSelectionScreen(string unit)
         {
-            productSelectionScreen.
+            productSelectionScreen.SelectUnit(unit);
         }
 
         [Then(@"I should see ""(.*)"" as Code on line ""(.*)"" on New Ticket Creation Screen")]
