@@ -84,7 +84,7 @@ testRunner.And("I click on \"New Line\" button from New Ticket Creation Screen",
 #line 11
 testRunner.And("I allocate \"3\" boxes of apples", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 12
-testRunner.And("I enter \"15\" as new sell price", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I enter \"15\" as new Sell Price", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 13
 testRunner.And("I click on \"Continue\" button from Product Selection Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 14
@@ -124,7 +124,39 @@ testRunner.And("I click on \"New Line\" button from New Ticket Creation Screen",
 #line 28
 testRunner.And("I search for Product with code \"CABSAV\" and select the Product from the list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 29
-testRunner.Then("I should see \"CABBAGE SAVOY . . 2KG VAC PAC SHREDDED\" as Product Name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("I enter \"3\" as Quantity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 30
+testRunner.And("I enter \"10\" as new Sell Price", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 31
+testRunner.And("I click on \"Add More\" button from Product Selection Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 32
+testRunner.And("I search for Product with code \"AVO\" and select the Product from the list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 33
+testRunner.And("I enter \"3\" as Quantity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 34
+testRunner.And("I enter \"10\" as new Sell Price", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 35
+testRunner.And("I click on \"Add More\" button from Product Selection Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 36
+testRunner.And("I search for Product with code \"ORA\" and select the Product from the list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 37
+testRunner.And("I select \"Each\" from Product Selection Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 38
+testRunner.And("I enter \"30\" as Quantity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 39
+testRunner.And("I enter \"0.50\" as new Sell Price", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 40
+testRunner.And("I click on \"Add More\" button from Product Selection Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 41
+testRunner.And("I search for Product with code \"CAPR\" and select the Product from the list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 42
+testRunner.And("I enter \"20\" as Quantity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 43
+testRunner.And("I enter \"0.65\" as new Sell Price", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 44
+testRunner.And("I click on \"Continue\" button from Product Selection Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 45
+testRunner.And("I click on \"Commit\" button from New Ticket Creation Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }

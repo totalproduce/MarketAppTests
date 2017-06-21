@@ -10,6 +10,7 @@ namespace MarketAppTests.Libraries.Screens
 
         private WindowsElement AllocQtyStockLine(int line) => windowsDriver.FindElementByXPath($"//List[@AutomationId=\'lstStocklines\']/ListItem[@ClassName=\'ListViewItem\'][{line}]/*[@ClassName=\'TextBox\'][1]");
         private WindowsElement BuyPriceStockLine(int line) => windowsDriver.FindElementByXPath($"//List[@AutomationId=\'lstStocklines\']/ListItem[@ClassName=\'ListViewItem\'][{line}]/*[@ClassName=\'TextBlock\'][8]");
+        private WindowsElement AddMoreButton => windowsDriver.FindElementByName("Add More");
         private WindowsElement ContinueButton => windowsDriver.FindElementByName("Continue");
         private WindowsElement DefaultProductId => windowsDriver.FindElementByName("APG");
         private WindowsElement LineStockLine(int line) => windowsDriver.FindElementByXPath($"//List[@AutomationId=\'lstStocklines\']/ListItem[@ClassName=\'ListViewItem\'][{line}]/*[@ClassName=\'TextBlock\'][1]");
@@ -27,7 +28,8 @@ namespace MarketAppTests.Libraries.Screens
 
         public void ClickOnButton(string buttonName)
         {
-            if (buttonName == "Continue") { ContinueButton.Click(); }
+            if (buttonName == "Add More") { AddMoreButton.Click(); }
+            else if (buttonName == "Continue") { ContinueButton.Click(); }
             else throw new Exception($"{buttonName} button not found. Please check the button name and try again.");
         }
 
@@ -53,7 +55,7 @@ namespace MarketAppTests.Libraries.Screens
             AllocQtyStockLine(CurrentStockLine).SendKeys(quantity.ToString());
         }
 
-        public void EnterSellPrice(int sellPrice)
+        public void EnterSellPrice(double sellPrice)
         {
             SellPriceStockLine(CurrentStockLine).SendKeys(sellPrice.ToString());
         }

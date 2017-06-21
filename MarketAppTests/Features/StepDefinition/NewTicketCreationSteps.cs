@@ -69,8 +69,8 @@ namespace MarketAppTests.Features.StepDefinition
             productSelectionScreen.EnterAllocQty(quantity);
         }
 
-        [When(@"I enter ""(.*)"" as new sell price")]
-        public void WhenIEnterAsNewSellPrice(int sellPrice)
+        [When(@"I enter ""(.*)"" as new Sell Price")]
+        public void WhenIEnterAsNewSellPrice(double sellPrice)
         {
             productSelectionScreen.EnterSellPrice(sellPrice);
         }
@@ -133,27 +133,14 @@ namespace MarketAppTests.Features.StepDefinition
             productSelectionScreen.SelectProductCode(productCode);
         }
 
-
-        [Then(@"I should see ""(.*)"" as Product Name")]
-        public void ThenIShouldSeeAsProductName(string productName)
-        {
-            ScenarioContext.Current.Pending();
-        }
-
         [When(@"I enter ""(.*)"" as Quantity")]
-        public void WhenIEnterAsQuantity(int p0)
+        public void WhenIEnterAsQuantity(int quantity)
         {
-            ScenarioContext.Current.Pending();
+            productSelectionScreen.EnterAllocQty(quantity);
         }
 
         [When(@"I select ""(.*)"" from Product Selection Screen")]
         public void WhenISelectFromProductSelectionScreen(string p0)
-        {
-            ScenarioContext.Current.Pending();
-        }
-
-        [When(@"I enter ""(.*)"" as New Sell Price")]
-        public void WhenIEnterAsNewSellPrice(Decimal p0)
         {
             ScenarioContext.Current.Pending();
         }
