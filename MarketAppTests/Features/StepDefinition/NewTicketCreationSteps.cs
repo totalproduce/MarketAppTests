@@ -142,7 +142,7 @@ namespace MarketAppTests.Features.StepDefinition
         [When(@"I select ""(.*)"" from Product Selection Screen")]
         public void WhenISelectFromProductSelectionScreen(string p0)
         {
-            ScenarioContext.Current.Pending();
+            productSelectionScreen.
         }
 
         [Then(@"I should see ""(.*)"" as Code on line ""(.*)"" on New Ticket Creation Screen")]
