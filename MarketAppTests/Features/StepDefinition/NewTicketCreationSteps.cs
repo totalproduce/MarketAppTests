@@ -11,6 +11,7 @@ namespace MarketAppTests.Features.StepDefinition
     public sealed class NewTicketCreationSteps
     {
         private WindowsDriver<WindowsElement> windowsDriver;
+
         private LoginScreen loginScreen;
         private SideBar sideBar;
         private NewTicketCreationScreen newTicketCreationScreen;
@@ -68,8 +69,8 @@ namespace MarketAppTests.Features.StepDefinition
             productSelectionScreen.EnterAllocQty(quantity);
         }
 
-        [When(@"I enter ""(.*)"" as new sell price")]
-        public void WhenIEnterAsNewSellPrice(int sellPrice)
+        [When(@"I enter ""(.*)"" as new Sell Price")]
+        public void WhenIEnterAsNewSellPrice(double sellPrice)
         {
             productSelectionScreen.EnterSellPrice(sellPrice);
         }
@@ -78,30 +79,70 @@ namespace MarketAppTests.Features.StepDefinition
         public void WhenIClickOnButtonFromProductSelectionScreen(string buttonName)
         {
             productSelectionScreen.ClickOnButton(buttonName);
+            newTicketCreationScreen = new NewTicketCreationScreen(this.windowsDriver);
         }
 
-        [Then(@"I should see ""(.*)"" as Code on New Ticket Creation Screen")]
-        public void ThenIShouldSeeAsCodeOnNewTicketCreationScreen(string code)
+        [When(@"I select the Customer with Id ""(.*)""")]
+        public void WhenISelectTheCustomerWithId(string text)
         {
-            //ScenarioContext.Current.Pending();
+            newTicketCreationScreen.EnterCustomerText(text);
+            newTicketCreationScreen.SelectCustomerById(text);
         }
 
-        [Then(@"I should see ""(.*)"" as Quantity on New Ticket Creation Screen")]
-        public void ThenIShouldSeeAsQuantityOnNewTicketCreationScreen(int quantity)
+        [When(@"I add ""(.*)"" as a Comment")]
+        public void WhenIAddAsAComment(string text)
         {
-            //ScenarioContext.Current.Pending();
+            newTicketCreationScreen.EnterCommentText(text);
         }
 
-        [Then(@"I should see ""(.*)"" as Unit Of Measurement on Ticket Creation Screen")]
-        public void ThenIShouldSeeAsUnitOfMeasurementOnTicketCreationScreen(string unit)
+        [When(@"I select ""(.*)"" as Type")]
+        public void WhenISelectAsType(string type)
         {
-            //ScenarioContext.Current.Pending();
+            newTicketCreationScreen.SelectType(type);
         }
 
-        [Then(@"I should see ""(.*)"" as Price on Ticket Creation Screen")]
-        public void ThenIShouldSeeAsPriceOnTicketCreationScreen(int price)
+
+        [When(@"I search for Product with code ""(.*)"" and select the Product from the list")]
+        public void WhenISearchForAndSelectTheProduct(string productCode)
         {
-            //ScenarioContext.Current.Pending();
+            productSelectionScreen.EnterProductCodeText(productCode);
+            productSelectionScreen.SelectProductCode(productCode);
+        }
+
+        [When(@"I enter ""(.*)"" as Quantity")]
+        public void WhenIEnterAsQuantity(int quantity)
+        {
+            productSelectionScreen.EnterAllocQty(quantity);
+        }
+
+        [When(@"I select ""(.*)"" from Product Selection Screen")]
+        public void WhenISelectFromProductSelectionScreen(string unit)
+        {
+            productSelectionScreen.SelectUnit(unit);
+        }
+
+        [Then(@"I should see ""(.*)"" as Code on line ""(.*)"" on New Ticket Creation Screen")]
+        public void ThenIShouldSeeAsCodeOnLineOnNewTicketCreationScreen(string code, int linenumber)
+        {
+            Assert.AreEqual(code, newTicketCreationScreen.GetCodeTicketLine(linenumber));
+        }
+
+        [Then(@"I should see ""(.*)"" as Quantity on line ""(.*)"" on New Ticket Creation Screen")]
+        public void ThenIShouldSeeAsQuantityOnLineOnNewTicketCreationScreen(string quantity, int linenumber)
+        {
+            Assert.AreEqual(quantity, newTicketCreationScreen.GetQtyTicketLine(linenumber));
+        }
+
+        [Then(@"I should see ""(.*)"" as Unit Of Measurement on line ""(.*)"" on Ticket Creation Screen")]
+        public void ThenIShouldSeeAsUnitOfMeasurementOnLineOnTicketCreationScreen(string unit, int linenumber)
+        {
+            Assert.AreEqual(unit, newTicketCreationScreen.GetUomTicketLine(linenumber));
+        }
+
+        [Then(@"I should see ""(.*)"" as Price on line ""(.*)"" on Ticket Creation Screen")]
+        public void ThenIShouldSeeAsPriceOnLineOnTicketCreationScreen(string price, int linenumber)
+        {
+            Assert.AreEqual(price, newTicketCreationScreen.GetPriceTicketLine(linenumber));
         }
     }
 }

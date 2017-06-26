@@ -14,9 +14,9 @@ namespace MarketAppTests.Libraries.Screens
         private WindowsElement SalesOffice => windowsDriver.FindElementByAccessibilityId("cbSalesOffice");
         private WindowsElement DefaultSalesOffice => windowsDriver.FindElementByName("02 TP Manchester");
         private WindowsElement Username => windowsDriver.FindElementByAccessibilityId("cbLogons");
-        private WindowsElement DefaultUsername => windowsDriver.FindElementByName("KMCKAY");
+        private WindowsElement DefaultUsername => windowsDriver.FindElementByName("HH_MANCH_BUY");
         private WindowsElement Salesman => windowsDriver.FindElementByAccessibilityId("cbSalesmen");
-        private WindowsElement DefaultSalesman => windowsDriver.FindElementByName("Billy O\'Brien");
+        private WindowsElement DefaultSalesman => windowsDriver.FindElementByName("HH Manch Buyer");
         private WindowsElement Pin => windowsDriver.FindElementByAccessibilityId("txtPassword");
         private WindowsElement RollbackWeeks => windowsDriver.FindElementByAccessibilityId("txtRollbackWeeks");
         private WindowsElement Login => windowsDriver.FindElementByName("Login");
@@ -32,8 +32,8 @@ namespace MarketAppTests.Libraries.Screens
             DefaultSalesOffice.Click();
             Username.Click();
             DefaultUsername.Click();
-            //Salesman.Click();
-            //DefaultSalesman.Click();
+            Salesman.Click();
+            DefaultSalesman.Click();
             Pin.SendKeys(DefaultPin);
             RollbackWeeks.SendKeys(DefaultRollbackWeeks);
             Login.Click();
