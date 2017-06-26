@@ -82,30 +82,6 @@ namespace MarketAppTests.Features.StepDefinition
             newTicketCreationScreen = new NewTicketCreationScreen(this.windowsDriver);
         }
 
-        [Then(@"I should see ""(.*)"" as Code on New Ticket Creation Screen")]
-        public void ThenIShouldSeeAsCodeOnNewTicketCreationScreen(string code)
-        {
-            Assert.AreEqual(code, newTicketCreationScreen.GetCodeTicketLine());
-        }
-
-        [Then(@"I should see ""(.*)"" as Quantity on New Ticket Creation Screen")]
-        public void ThenIShouldSeeAsQuantityOnNewTicketCreationScreen(string quantity)
-        {
-            Assert.AreEqual(quantity, newTicketCreationScreen.GetQtyTicketLine());
-        }
-
-        [Then(@"I should see ""(.*)"" as Unit Of Measurement on Ticket Creation Screen")]
-        public void ThenIShouldSeeAsUnitOfMeasurementOnTicketCreationScreen(string unit)
-        {
-            Assert.AreEqual(unit, newTicketCreationScreen.GetUomTicketLine());
-        }
-
-        [Then(@"I should see ""(.*)"" as Price on Ticket Creation Screen")]
-        public void ThenIShouldSeeAsPriceOnTicketCreationScreen(string price)
-        {
-            Assert.AreEqual(price, newTicketCreationScreen.GetPriceTicketLine());
-        }
-
         [When(@"I select the Customer with Id ""(.*)""")]
         public void WhenISelectTheCustomerWithId(string text)
         {
@@ -146,27 +122,27 @@ namespace MarketAppTests.Features.StepDefinition
         }
 
         [Then(@"I should see ""(.*)"" as Code on line ""(.*)"" on New Ticket Creation Screen")]
-        public void ThenIShouldSeeAsCodeOnLineOnNewTicketCreationScreen(string p0, int p1)
+        public void ThenIShouldSeeAsCodeOnLineOnNewTicketCreationScreen(string code, int linenumber)
         {
-            ScenarioContext.Current.Pending();
+            Assert.AreEqual(code, newTicketCreationScreen.GetCodeTicketLine(linenumber));
         }
 
         [Then(@"I should see ""(.*)"" as Quantity on line ""(.*)"" on New Ticket Creation Screen")]
-        public void ThenIShouldSeeAsQuantityOnLineOnNewTicketCreationScreen(int p0, int p1)
+        public void ThenIShouldSeeAsQuantityOnLineOnNewTicketCreationScreen(string quantity, int linenumber)
         {
-            ScenarioContext.Current.Pending();
+            Assert.AreEqual(quantity, newTicketCreationScreen.GetQtyTicketLine(linenumber));
         }
 
         [Then(@"I should see ""(.*)"" as Unit Of Measurement on line ""(.*)"" on Ticket Creation Screen")]
-        public void ThenIShouldSeeAsUnitOfMeasurementOnLineOnTicketCreationScreen(string p0, int p1)
+        public void ThenIShouldSeeAsUnitOfMeasurementOnLineOnTicketCreationScreen(string unit, int linenumber)
         {
-            ScenarioContext.Current.Pending();
+            Assert.AreEqual(unit, newTicketCreationScreen.GetUomTicketLine(linenumber));
         }
 
         [Then(@"I should see ""(.*)"" as Price on line ""(.*)"" on Ticket Creation Screen")]
-        public void ThenIShouldSeeAsPriceOnLineOnTicketCreationScreen(int p0, int p1)
+        public void ThenIShouldSeeAsPriceOnLineOnTicketCreationScreen(string price, int linenumber)
         {
-            ScenarioContext.Current.Pending();
+            Assert.AreEqual(price, newTicketCreationScreen.GetPriceTicketLine(linenumber));
         }
     }
 }

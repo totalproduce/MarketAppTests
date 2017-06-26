@@ -90,13 +90,13 @@ testRunner.And("I click on \"Continue\" button from Product Selection Screen", (
 #line 14
 testRunner.And("I click on \"Commit\" button from New Ticket Creation Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 15
-testRunner.Then("I should see \"APG\" as Code on New Ticket Creation Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see \"APG\" as Code on line \"1\" on New Ticket Creation Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 16
-testRunner.And("I should see \"3\" as Quantity on New Ticket Creation Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I should see \"3\" as Quantity on line \"1\" on New Ticket Creation Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 17
-testRunner.And("I should see \"Box\" as Unit Of Measurement on Ticket Creation Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I should see \"Box\" as Unit Of Measurement on line \"1\" on Ticket Creation Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 18
-testRunner.And("I should see \"15.00\" as Price on Ticket Creation Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I should see \"15.00\" as Price on line \"1\" on Ticket Creation Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -157,6 +157,38 @@ testRunner.And("I enter \"0.65\" as new Sell Price", ((string)(null)), ((TechTal
 testRunner.And("I click on \"Continue\" button from Product Selection Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 45
 testRunner.And("I click on \"Commit\" button from New Ticket Creation Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 46
+testRunner.Then("I should see \"CABSAV\" as Code on line \"1\" on New Ticket Creation Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 47
+testRunner.And("I should see \"3\" as Quantity on line \"1\" on New Ticket Creation Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 48
+testRunner.And("I should see \"Box\" as Unit Of Measurement on line \"1\" on Ticket Creation Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 49
+testRunner.And("I should see \"10.00\" as Price on line \"1\" on Ticket Creation Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 50
+testRunner.And("I should see \"AVO\" as Code on line \"2\" on New Ticket Creation Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 51
+testRunner.And("I should see \"3\" as Quantity on line \"2\" on New Ticket Creation Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 52
+testRunner.And("I should see \"Box\" as Unit Of Measurement on line \"2\" on Ticket Creation Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 53
+testRunner.And("I should see \"10.00\" as Price on line \"2\" on Ticket Creation Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 54
+testRunner.And("I should see \"ORA\" as Code on line \"3\" on New Ticket Creation Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 55
+testRunner.And("I should see \"30\" as Quantity on line \"3\" on New Ticket Creation Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 56
+testRunner.And("I should see \"Each\" as Unit Of Measurement on line \"3\" on Ticket Creation Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 57
+testRunner.And("I should see \"0.50\" as Price on line \"3\" on Ticket Creation Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 58
+testRunner.And("I should see \"CAPR\" as Code on line \"4\" on New Ticket Creation Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 59
+testRunner.And("I should see \"20\" as Quantity on line \"4\" on New Ticket Creation Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 60
+testRunner.And("I should see \"Each\" as Unit Of Measurement on line \"4\" on Ticket Creation Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 61
+testRunner.And("I should see \"0.65\" as Price on line \"4\" on Ticket Creation Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }

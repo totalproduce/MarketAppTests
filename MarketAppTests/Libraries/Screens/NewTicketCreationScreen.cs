@@ -78,24 +78,24 @@ namespace MarketAppTests.Libraries.Screens
             else throw new Exception("Element not found. Please check the name and try again.");
         }
 
-        public string GetCodeTicketLine()
+        public string GetCodeTicketLine(int linenumber)
         {
-            return CodeTicketLine(1).Text;
+            return CodeTicketLine(linenumber).Text;
         }
 
-        public string GetQtyTicketLine()
+        public string GetQtyTicketLine(int linenumber)
         {
-            return QtyTicketLine(1).Text;
+            return QtyTicketLine(linenumber).Text;
         }
 
-        public string GetUomTicketLine()
+        public string GetUomTicketLine(int linenumber)
         {
-            return UomTicketLine(1).Text;
+            return UomTicketLine(linenumber).Text;
         }
 
-        public string GetPriceTicketLine()
+        public string GetPriceTicketLine(int linenumber)
         {
-            return PriceTicketLine(1).Text;
+            return PriceTicketLine(linenumber).Text;
         }
     }
 }

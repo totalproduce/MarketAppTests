@@ -17,7 +17,6 @@ namespace MarketAppTests.Libraries.Screens
         private WindowsElement LineStockLine(int line) => windowsDriver.FindElementByXPath($"//List[@AutomationId=\'lstStocklines\']/ListItem[@ClassName=\'ListViewItem\'][{line}]/*[@ClassName=\'TextBlock\'][1]");
         private WindowsElement ProductText => windowsDriver.FindElementByXPath("//*[@AutomationId=\'txtProductCodeSearch\']/*[@AutomationId=\'TextBox\'][1]");
         private WindowsElement ProductByCode(string productCode) => windowsDriver.FindElementByXPath($"//*[@Name=\'TotalProduce.MarketApp.Models.HH_ProductCodeSearchItem\']/*[@Name=\'{productCode}\']");
-        //private WindowsElement ProductByCode(string productCode) => windowsDriver.FindElementByName(productCode);
         private WindowsElement SellPriceStockLine(int line) => windowsDriver.FindElementByXPath($"//List[@AutomationId=\'lstStocklines\']/ListItem[@ClassName=\'ListViewItem\'][{line}]/*[@ClassName=\'TextBox\'][2]");
         private WindowsElement StockStockLine(int line) => windowsDriver.FindElementByXPath($"//List[@AutomationId=\'lstStocklines\']/ListItem[@ClassName=\'ListViewItem\'][{line}]/*[@ClassName=\'TextBlock\'][7]");
 
