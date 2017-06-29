@@ -95,6 +95,7 @@
     <Compile Include="Libraries\Screens\NewPurchaseOrderScreen.cs" />
     <Compile Include="Libraries\Screens\NewTicketCreationScreen.cs" />
     <Compile Include="Libraries\Screens\ProductSelectionScreen.cs" />
+    <Compile Include="Libraries\Screens\PurchaseOrderLineEntryScreen.cs" />
     <Compile Include="Libraries\Screens\SideBar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -13,6 +13,7 @@ namespace MarketAppTests.Features.StepDefinition
         private WindowsDriver<WindowsElement> windowsDriver;
 
         private NewPurchaseOrderScreen newPurchaseOrderScreen;
+        private PurchaseOrderLineEntryScreen purchaseOrderLineEntryScreen;
 
         public CreatePurchaseOrderSteps(WindowsDriver<WindowsElement> windowsDriver)
         {
@@ -27,21 +28,24 @@ namespace MarketAppTests.Features.StepDefinition
         }
 
         [When(@"I select the Supplier with Id ""(.*)"" Create Purchase Order Screen")]
-        public void WhenISelectTheSupplierWithIdCreatePurchaseOrderScreen(int p0)
+        public void WhenISelectTheSupplierWithIdCreatePurchaseOrderScreen(string text)
         {
-            ScenarioContext.Current.Pending();
+            newPurchaseOrderScreen.EnterSupplierText(text);
+            newPurchaseOrderScreen.SelectSupplierByCode(text);
         }
 
         [When(@"I click on ""(.*)"" button from Create Purchase Order Screen")]
-        public void WhenIClickOnButtonFromCreatePurchaseOrderScreen(string p0)
+        public void WhenIClickOnButtonFromCreatePurchaseOrderScreen(string buttonName)
         {
-            ScenarioContext.Current.Pending();
+            newPurchaseOrderScreen.ClickOnButton(buttonName);
+            if (buttonName == "New Line") { purchaseOrderLineEntryScreen = new PurchaseOrderLineEntryScreen(windowsDriver); }
         }
 
         [When(@"I search for Product with code ""(.*)"" from Purchase Order Line Entry Screen")]
-        public void WhenISearchForProductWithCodeFromPurchaseOrderLineEntryScreen(string p0)
+        public void WhenISearchForProductWithCodeFromPurchaseOrderLineEntryScreen(string text)
         {
-            ScenarioContext.Current.Pending();
+            purchaseOrderLineEntryScreen.EnterProductText(text);
+            purchaseOrderLineEntryScreen.SelectProductByCode(text);
         }
 
         [When(@"I select ""(.*)"" as Weight from Purchase Order Line Entry Screen")]

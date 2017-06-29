@@ -4,7 +4,7 @@ using System;
 
 namespace MarketAppTests.Libraries.Screens
 {
-    public class ProductSelectionScreen
+    class ProductSelectionScreen
     {
         private WindowsDriver<WindowsElement> windowsDriver;
 

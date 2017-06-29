@@ -5,7 +5,7 @@ using System;
 
 namespace MarketAppTests.Libraries.Screens
 {
-    public class SideBar
+    class SideBar
     {
         private WindowsDriver<WindowsElement> windowsDriver;
 

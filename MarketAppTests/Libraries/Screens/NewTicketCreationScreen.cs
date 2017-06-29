@@ -4,7 +4,7 @@ using System;
 
 namespace MarketAppTests.Libraries.Screens
 {
-    public class NewTicketCreationScreen
+    class NewTicketCreationScreen
     {
         private WindowsDriver<WindowsElement> windowsDriver;
 

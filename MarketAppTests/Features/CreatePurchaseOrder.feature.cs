@@ -77,6 +77,12 @@ testRunner.When("I click on \"Create Purchase Order\" button from SideBar", ((st
 testRunner.And("I select \"Expected\" as Status from Create Purchase Order Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 8
 testRunner.And("I select the Supplier with Id \"18046\" Create Purchase Order Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 9
+testRunner.And("I click on \"New Line\" button from Create Purchase Order Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 10
+testRunner.And("I search for Product with code \"CABSAV\" from Purchase Order Line Entry Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 11
+testRunner.And("I select \"2KG\" as Weight from Purchase Order Line Entry Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
