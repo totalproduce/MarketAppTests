@@ -77,7 +77,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Features\CreatePurchaseOrder.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CreatePurchaseOrder.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\StepDefinition\CreatePurchaseOrderSteps.cs" />
     <Compile Include="Features\StepDefinition\NewTicketCreationSteps.cs" />
+    <Compile Include="Features\StepDefinition\CommonSteps.cs" />
     <Compile Include="Features\Support\Hooks.cs" />
     <Compile Include="Features\NewTicketCreation.feature.cs">
       <AutoGen>True</AutoGen>
@@ -85,6 +92,7 @@
       <DependentUpon>NewTicketCreation.feature</DependentUpon>
     </Compile>
     <Compile Include="Libraries\Screens\LoginScreen.cs" />
+    <Compile Include="Libraries\Screens\NewPurchaseOrderScreen.cs" />
     <Compile Include="Libraries\Screens\NewTicketCreationScreen.cs" />
     <Compile Include="Libraries\Screens\ProductSelectionScreen.cs" />
     <Compile Include="Libraries\Screens\SideBar.cs" />
@@ -95,6 +103,10 @@
     <None Include="Default.srprofile">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Features\CreatePurchaseOrder.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CreatePurchaseOrder.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\NewTicketCreation.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

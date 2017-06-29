@@ -12,28 +12,12 @@ namespace MarketAppTests.Features.StepDefinition
     {
         private WindowsDriver<WindowsElement> windowsDriver;
 
-        private LoginScreen loginScreen;
-        private SideBar sideBar;
         private NewTicketCreationScreen newTicketCreationScreen;
         private ProductSelectionScreen productSelectionScreen;
 
         public NewTicketCreationSteps(WindowsDriver<WindowsElement> windowsDriver)
         {
             this.windowsDriver = windowsDriver;
-        }
-
-        [Given(@"I am a Registered User")]
-        public void GivenIAmARegisteredUser()
-        {
-            loginScreen = new LoginScreen(this.windowsDriver);
-            loginScreen.LoginWithDefaultUser();
-            sideBar = new SideBar(this.windowsDriver);
-        }
-
-        [When(@"I click on ""(.*)"" button from SideBar")]
-        public void WhenIClickOnButton(string buttonName)
-        {
-            sideBar.ClickOnButton(buttonName);
             newTicketCreationScreen = new NewTicketCreationScreen(this.windowsDriver);
         }
 
