@@ -108,25 +108,25 @@ namespace MarketAppTests.Features.StepDefinition
         [Then(@"I should see ""(.*)"" as Code on line ""(.*)"" on New Ticket Creation Screen")]
         public void ThenIShouldSeeAsCodeOnLineOnNewTicketCreationScreen(string code, int linenumber)
         {
-            Assert.AreEqual(code, newTicketCreationScreen.GetCodeTicketLine(linenumber));
+            Assert.AreEqual(code, newTicketCreationScreen.GetCodeTicketLineText(linenumber));
         }
 
         [Then(@"I should see ""(.*)"" as Quantity on line ""(.*)"" on New Ticket Creation Screen")]
         public void ThenIShouldSeeAsQuantityOnLineOnNewTicketCreationScreen(string quantity, int linenumber)
         {
-            Assert.AreEqual(quantity, newTicketCreationScreen.GetQtyTicketLine(linenumber));
+            Assert.AreEqual(quantity, newTicketCreationScreen.GetQtyTicketLineText(linenumber));
         }
 
         [Then(@"I should see ""(.*)"" as Unit Of Measurement on line ""(.*)"" on Ticket Creation Screen")]
         public void ThenIShouldSeeAsUnitOfMeasurementOnLineOnTicketCreationScreen(string unit, int linenumber)
         {
-            Assert.AreEqual(unit, newTicketCreationScreen.GetUomTicketLine(linenumber));
+            Assert.AreEqual(unit, newTicketCreationScreen.GetUomTicketLineText(linenumber));
         }
 
         [Then(@"I should see ""(.*)"" as Price on line ""(.*)"" on Ticket Creation Screen")]
         public void ThenIShouldSeeAsPriceOnLineOnTicketCreationScreen(string price, int linenumber)
         {
-            Assert.AreEqual(price, newTicketCreationScreen.GetPriceTicketLine(linenumber));
+            Assert.AreEqual(price, newTicketCreationScreen.GetPriceTicketLineText(linenumber));
         }
     }
 }

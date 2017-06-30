@@ -78,22 +78,22 @@ namespace MarketAppTests.Libraries.Screens
             else throw new Exception($"{buttonName} Button not found. Please check Button Name and try again.");
         }
 
-        public string GetCodeTicketLine(int linenumber)
+        public string GetCodeTicketLineText(int linenumber)
         {
             return CodeTicketLine(linenumber).Text;
         }
 
-        public string GetQtyTicketLine(int linenumber)
+        public string GetQtyTicketLineText(int linenumber)
         {
             return QtyTicketLine(linenumber).Text;
         }
 
-        public string GetUomTicketLine(int linenumber)
+        public string GetUomTicketLineText(int linenumber)
         {
             return UomTicketLine(linenumber).Text;
         }
 
-        public string GetPriceTicketLine(int linenumber)
+        public string GetPriceTicketLineText(int linenumber)
         {
             return PriceTicketLine(linenumber).Text;
         }
