@@ -87,6 +87,29 @@ testRunner.And("I select \"2KG\" as Weight from Purchase Order Line Entry Screen
 testRunner.And("I click on \"Continue\" button from Purchase Order Line Entry Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 13
 testRunner.And("I enter \"160\" as Expected amount from Purchase Order Line Entry Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 14
+testRunner.And("I enter \"8.00\" as Buy Price from Purchase Order Line Entry Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 15
+testRunner.And("I select \"VEGETABLES\" as Department from Purchase Order Line Entry Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 16
+testRunner.And("I click on \"Continue\" button from Purchase Order Line Entry Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 17
+testRunner.Then("I should see \"CABSAV\" as Short Code on line \"1\" on Create Purchase Order Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 18
+testRunner.And("I should see \"SAVOY CABBAGE\" as Short Description on line \"1\" on Create Purchase " +
+                    "Order Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 19
+testRunner.And("I should see \"25546\" as Product Code on line \"1\" on Create Purchase Order Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 20
+testRunner.And("I should see \"160\" as Expected Quantity on line \"1\" on Create Purchase Order Scre" +
+                    "en", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 21
+testRunner.And("I should see \"8.00\" as Buy Price on line \"1\" on Create Purchase Order Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 22
+testRunner.And("I should see \"Goods Invoice\" as Type on line \"1\" on Create Purchase Order Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 23
+testRunner.And("I should see \"VEGETABLES\" as Department on line \"1\" on Create Purchase Order Scre" +
+                    "en", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }

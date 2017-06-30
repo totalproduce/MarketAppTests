@@ -8,7 +8,11 @@ namespace MarketAppTests.Libraries.Screens
     {
         private WindowsDriver<WindowsElement> windowsDriver;
 
+        private WindowsElement BuyPriceText => windowsDriver.FindElementByAccessibilityId("txtPurchasePrice");
         private WindowsElement ContinueButton => windowsDriver.FindElementByName("Continue");
+        private WindowsElement Department => windowsDriver.FindElementByAccessibilityId("cbDepartments");
+        private WindowsElement DepartmentByName(string name) => windowsDriver.FindElementByXPath($"//ComboBox[@AutomationId=\'cbDepartments\']/ListItem[@Name=\'{name}\']");
+        private WindowsElement ExpectedText => windowsDriver.FindElementByAccessibilityId("txtExpected");
         private WindowsElement ProductByCode(string code) => windowsDriver.FindElementByName(code);
         private WindowsElement ProductText => windowsDriver.FindElementByAccessibilityId("txtProductCodeSearch");
         private WindowsElement WeightByText(string weight) => windowsDriver.FindElementByXPath($"//List[@AutomationId=\'lstField5\']/ListItem[@Name=\'{weight}\']");
@@ -38,6 +42,22 @@ namespace MarketAppTests.Libraries.Screens
         {
             if (buttonName == "Continue") { ContinueButton.Click(); }
             else throw new Exception($"{buttonName} Button not found. Please check Button Name and try again.");
+        }
+
+        public void EnterExpectedText(string text)
+        {
+            ExpectedText.SendKeys(text);
+        }
+
+        public void EnterBuyPriceText(string text)
+        {
+            BuyPriceText.SendKeys(text);
+        }
+
+        public void SelectDepartmentByName(string name)
+        {
+            Department.Click();
+            DepartmentByName(name).Click();
         }
     }
 }

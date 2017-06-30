@@ -63,19 +63,61 @@ namespace MarketAppTests.Features.StepDefinition
         [When(@"I enter ""(.*)"" as Expected amount from Purchase Order Line Entry Screen")]
         public void WhenIEnterAsExpectedAmountFromPurchaseOrderLineEntryScreen(string amount)
         {
-            ScenarioContext.Current.Pending();
+            purchaseOrderLineEntryScreen.EnterExpectedText(amount);
         }
 
         [When(@"I enter ""(.*)"" as Buy Price from Purchase Order Line Entry Screen")]
-        public void WhenIEnterAsBuyPriceFromPurchaseOrderLineEntryScreen(Decimal p0)
+        public void WhenIEnterAsBuyPriceFromPurchaseOrderLineEntryScreen(string buyPrice)
         {
-            ScenarioContext.Current.Pending();
+            purchaseOrderLineEntryScreen.EnterBuyPriceText(buyPrice);
         }
 
         [When(@"I select ""(.*)"" as Department from Purchase Order Line Entry Screen")]
-        public void WhenISelectAsDepartmentFromPurchaseOrderLineEntryScreen(string p0)
+        public void WhenISelectAsDepartmentFromPurchaseOrderLineEntryScreen(string deptName)
         {
-            ScenarioContext.Current.Pending();
+            purchaseOrderLineEntryScreen.SelectDepartmentByName(deptName);
+        }
+
+        [Then(@"I should see ""(.*)"" as Short Code on line ""(.*)"" on Create Purchase Order Screen")]
+        public void ThenIShouldSeeAsShortCodeOnLineOnCreatePurchaseOrderScreen(string shortCode, int line)
+        {
+            Assert.AreEqual(shortCode, newPurchaseOrderScreen.GetShortCodeLineText(line));
+        }
+
+        [Then(@"I should see ""(.*)"" as Short Description on line ""(.*)"" on Create Purchase Order Screen")]
+        public void ThenIShouldSeeAsShortDescriptionOnLineOnCreatePurchaseOrderScreen(string shortDescription, int line)
+        {
+            Assert.AreEqual(shortDescription, newPurchaseOrderScreen.GetShortDescriptionLineText(line));
+        }
+
+        [Then(@"I should see ""(.*)"" as Product Code on line ""(.*)"" on Create Purchase Order Screen")]
+        public void ThenIShouldSeeAsProductCodeOnLineOnCreatePurchaseOrderScreen(string productCode, int line)
+        {
+            Assert.AreEqual(productCode, newPurchaseOrderScreen.GetProductCodeLineText(line));
+        }
+
+        [Then(@"I should see ""(.*)"" as Expected Quantity on line ""(.*)"" on Create Purchase Order Screen")]
+        public void ThenIShouldSeeAsExpectedQuantityOnLineOnCreatePurchaseOrderScreen(string expectedQuantity, int line)
+        {
+            Assert.AreEqual(expectedQuantity, newPurchaseOrderScreen.GetExpectedQuantityLineText(line));
+        }
+
+        [Then(@"I should see ""(.*)"" as Buy Price on line ""(.*)"" on Create Purchase Order Screen")]
+        public void ThenIShouldSeeAsBuyPriceOnLineOnCreatePurchaseOrderScreen(string buyPrice, int line)
+        {
+            Assert.AreEqual(buyPrice, newPurchaseOrderScreen.GetBuyPriceLineText(line));
+        }
+
+        [Then(@"I should see ""(.*)"" as Type on line ""(.*)"" on Create Purchase Order Screen")]
+        public void ThenIShouldSeeAsTypeOnLineOnCreatePurchaseOrderScreen(string type, int line)
+        {
+            Assert.AreEqual(type, newPurchaseOrderScreen.GetTypeLineText(line));
+        }
+
+        [Then(@"I should see ""(.*)"" as Department on line ""(.*)"" on Create Purchase Order Screen")]
+        public void ThenIShouldSeeAsDepartmentOnLineOnCreatePurchaseOrderScreen(string department, int line)
+        {
+            Assert.AreEqual(department, newPurchaseOrderScreen.GetDepartmentLine(line));
         }
     }
 }

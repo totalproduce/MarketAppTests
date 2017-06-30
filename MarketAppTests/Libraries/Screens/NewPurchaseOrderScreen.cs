@@ -14,6 +14,13 @@ namespace MarketAppTests.Libraries.Screens
         private WindowsElement ReceivedRdButton => windowsDriver.FindElementByName("Received");
         private WindowsElement SupplierByCode(string code) => windowsDriver.FindElementByName(code);
         private WindowsElement SupplierText => windowsDriver.FindElementByAccessibilityId("txtAccountSearch");
+        private WindowsElement ShortCodeByLine(int line) => windowsDriver.FindElementByXPath($"//List[@AutomationId=\'lstSearchResults\']/ListItem[@ClassName=\'ListViewItem\'][{line}]/*[@ClassName=\'Hyperlink\'][1]");
+        private WindowsElement ShortDescriptionByLine(int line) => windowsDriver.FindElementByXPath($"//List[@AutomationId=\'lstSearchResults\']/ListItem[@ClassName=\'ListViewItem\'][{line}]/*[@ClassName=\'TextBlock\'][1]");
+        private WindowsElement ProductCodeByLine(int line) => windowsDriver.FindElementByXPath($"//List[@AutomationId=\'lstSearchResults\']/ListItem[@ClassName=\'ListViewItem\'][{line}]/*[@ClassName=\'TextBlock\'][2]");
+        private WindowsElement ExpectedQuantityByLine(int line) => windowsDriver.FindElementByXPath($"//List[@AutomationId=\'lstSearchResults\']/ListItem[@ClassName=\'ListViewItem\'][{line}]/*[@ClassName=\'TextBlock\'][4]");
+        private WindowsElement BuyPriceByLine(int line) => windowsDriver.FindElementByXPath($"//List[@AutomationId=\'lstSearchResults\']/ListItem[@ClassName=\'ListViewItem\'][{line}]/*[@ClassName=\'TextBlock\'][9]");
+        private WindowsElement TypeByLine(int line) => windowsDriver.FindElementByXPath($"//List[@AutomationId=\'lstSearchResults\']/ListItem[@ClassName=\'ListViewItem\'][{line}]/*[@ClassName=\'TextBlock\'][13]");
+        private WindowsElement DepartmentByLine(int line) => windowsDriver.FindElementByXPath($"//List[@AutomationId=\'lstSearchResults\']/ListItem[@ClassName=\'ListViewItem\'][{line}]/*[@ClassName=\'TextBlock\'][14]");
 
         public NewPurchaseOrderScreen(WindowsDriver<WindowsElement> windowsDriver)
         {
@@ -43,6 +50,42 @@ namespace MarketAppTests.Libraries.Screens
             if (buttonName == "New Line") { NewLineButton.Click(); }
             else if (buttonName == "Commit") { CommitButton.Click(); }
             else throw new Exception($"{buttonName} Button not found. Please check Button Name and try again.");
+        }
+
+        public string GetShortCodeLineText(int line)
+        {
+            do { System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1)); } while (ShortCodeByLine(line).Displayed is false);
+            return ShortCodeByLine(line).Text;
+        }
+
+        public string GetShortDescriptionLineText(int line)
+        {
+            return ShortDescriptionByLine(line).Text;
+        }
+
+        public string GetProductCodeLineText(int line)
+        {
+            return ProductCodeByLine(line).Text;
+        }
+
+        public string GetExpectedQuantityLineText(int line)
+        {
+            return ExpectedQuantityByLine(line).Text;
+        }
+
+        public string GetBuyPriceLineText(int line)
+        {
+            return BuyPriceByLine(line).Text;
+        }
+
+        public string GetTypeLineText(int line)
+        {
+            return TypeByLine(line).Text;
+        }
+
+        public string GetDepartmentLine(int line)
+        {
+            return DepartmentByLine(line).Text;
         }
     }
 }
