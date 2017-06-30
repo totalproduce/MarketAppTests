@@ -12,6 +12,7 @@ namespace MarketAppTests.Libraries.Screens
         private WindowsElement NewLineButton => windowsDriver.FindElementByName("New Line");
         private WindowsElement ExpectedRdButton => windowsDriver.FindElementByName("Expected");
         private WindowsElement ReceivedRdButton => windowsDriver.FindElementByName("Received");
+        private WindowsElement DeleteButton => windowsDriver.FindElementByAccessibilityId("DeleteButton");
         private WindowsElement SupplierByCode(string code) => windowsDriver.FindElementByName(code);
         private WindowsElement SupplierText => windowsDriver.FindElementByAccessibilityId("txtAccountSearch");
         private WindowsElement ShortCodeByLine(int line) => windowsDriver.FindElementByXPath($"//List[@AutomationId=\'lstSearchResults\']/ListItem[@ClassName=\'ListViewItem\'][{line}]/*[@ClassName=\'Hyperlink\'][1]");
@@ -37,6 +38,12 @@ namespace MarketAppTests.Libraries.Screens
         public void EnterSupplierText(string text)
         {
             SupplierText.SendKeys(text);
+        }
+
+        public void ClearSupplierText()
+        {
+            SupplierText.Click();
+            DeleteButton.Click();
         }
 
         public void SelectSupplierByCode(string code)

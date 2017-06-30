@@ -27,7 +27,7 @@ namespace MarketAppTests.Features.StepDefinition
             newPurchaseOrderScreen.SelectStatus(status);
         }
 
-        [When(@"I select the Supplier with Id ""(.*)"" Create Purchase Order Screen")]
+        [When(@"I select the Supplier with Id ""(.*)"" from Create Purchase Order Screen")]
         public void WhenISelectTheSupplierWithIdCreatePurchaseOrderScreen(string text)
         {
             newPurchaseOrderScreen.EnterSupplierText(text);
@@ -77,6 +77,15 @@ namespace MarketAppTests.Features.StepDefinition
         {
             purchaseOrderLineEntryScreen.SelectDepartmentByName(deptName);
         }
+
+        [When(@"I change the Supplier for the one with Id ""(.*)"" from Create Purchase Order Screen")]
+        public void WhenIChangeTheSupplierForTheOneWithIdFromCreatePurchaseOrderScreen(string text)
+        {
+            newPurchaseOrderScreen.ClearSupplierText();
+            newPurchaseOrderScreen.EnterSupplierText(text);
+            newPurchaseOrderScreen.SelectSupplierByCode(text);
+        }
+
 
         [Then(@"I should see ""(.*)"" as Short Code on line ""(.*)"" on Create Purchase Order Screen")]
         public void ThenIShouldSeeAsShortCodeOnLineOnCreatePurchaseOrderScreen(string shortCode, int line)

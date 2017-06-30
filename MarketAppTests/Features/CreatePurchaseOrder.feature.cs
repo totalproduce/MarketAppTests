@@ -76,7 +76,7 @@ testRunner.When("I click on \"Create Purchase Order\" button from SideBar", ((st
 #line 7
 testRunner.And("I select \"Expected\" as Status from Create Purchase Order Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 8
-testRunner.And("I select the Supplier with Id \"18046\" Create Purchase Order Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I select the Supplier with Id \"18046\" from Create Purchase Order Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 9
 testRunner.And("I click on \"New Line\" button from Create Purchase Order Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 10
@@ -110,6 +110,9 @@ testRunner.And("I should see \"Goods Invoice\" as Type on line \"1\" on Create P
 #line 23
 testRunner.And("I should see \"VEGETABLES\" as Department on line \"1\" on Create Purchase Order Scre" +
                     "en", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 24
+testRunner.When("I change the Supplier for the one with Id \"10128\" from Create Purchase Order Scre" +
+                    "en", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
         }
