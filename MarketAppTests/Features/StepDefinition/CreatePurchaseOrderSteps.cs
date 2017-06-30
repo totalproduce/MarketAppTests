@@ -49,19 +49,19 @@ namespace MarketAppTests.Features.StepDefinition
         }
 
         [When(@"I select ""(.*)"" as Weight from Purchase Order Line Entry Screen")]
-        public void WhenISelectAsWeightFromPurchaseOrderLineEntryScreen(string p0)
+        public void WhenISelectAsWeightFromPurchaseOrderLineEntryScreen(string weight)
         {
-            ScenarioContext.Current.Pending();
+            purchaseOrderLineEntryScreen.SelectWeightByText(weight);
         }
 
         [When(@"I click on ""(.*)"" button from Purchase Order Line Entry Screen")]
-        public void WhenIClickOnButtonFromPurchaseOrderLineEntryScreen(string p0)
+        public void WhenIClickOnButtonFromPurchaseOrderLineEntryScreen(string buttonName)
         {
-            ScenarioContext.Current.Pending();
+            purchaseOrderLineEntryScreen.ClickOnButton(buttonName);
         }
 
         [When(@"I enter ""(.*)"" as Expected amount from Purchase Order Line Entry Screen")]
-        public void WhenIEnterAsExpectedAmountFromPurchaseOrderLineEntryScreen(int p0)
+        public void WhenIEnterAsExpectedAmountFromPurchaseOrderLineEntryScreen(string amount)
         {
             ScenarioContext.Current.Pending();
         }

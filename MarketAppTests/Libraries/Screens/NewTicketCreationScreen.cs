@@ -75,7 +75,7 @@ namespace MarketAppTests.Libraries.Screens
         {
             if (buttonName == "New Line") { NewLineButton.Click(); }
             else if (buttonName == "Commit") { CommitButton.Click(); }
-            else throw new Exception("Element not found. Please check the name and try again.");
+            else throw new Exception($"{buttonName} Button not found. Please check Button Name and try again.");
         }
 
         public string GetCodeTicketLine(int linenumber)

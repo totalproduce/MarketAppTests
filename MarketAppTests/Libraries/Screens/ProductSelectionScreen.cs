@@ -31,7 +31,7 @@ namespace MarketAppTests.Libraries.Screens
         {
             if (buttonName == "Add More") { AddMoreButton.Click(); }
             else if (buttonName == "Continue") { ContinueButton.Click(); }
-            else throw new Exception($"{buttonName} button not found. Please check the button name and try again.");
+            else throw new Exception($"{buttonName} Button not found. Please check Button Name and try again.");
         }
 
         public void SelectDefaultProductId()
