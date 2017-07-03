@@ -1,22 +1,5 @@
 ﻿Feature: NewTicketCreation
 
-#@CreateNewTicket
-#Scenario: Create New ticket
-#Given I am a Registered User
-#When I click on "Create New Ticket" button from SideBar
-#And I select a Customer
-#And I select a Delivery Type
-#And I add a Email Address
-#And I click on "New Line" button from New Ticket Creation Screen
-#And I allocate "3" boxes of apples
-#And I enter "15" as new Sell Price
-#And I click on "Continue" button from Product Selection Screen
-#And I click on "Commit" button from New Ticket Creation Screen
-#Then I should see "APG" as Code on line "1" on New Ticket Creation Screen
-#And  I should see "3" as Quantity on line "1" on New Ticket Creation Screen
-#And I should see "Box" as Unit Of Measurement on line "1" on Ticket Creation Screen
-#And I should see "15.00" as Price on line "1" on Ticket Creation Screen
-
 @CreateNewTicket-MultipleLines-CashSale
 Scenario: Create New Ticket - Multiple Lines - Cash Sale
 Given I am a Registered User
