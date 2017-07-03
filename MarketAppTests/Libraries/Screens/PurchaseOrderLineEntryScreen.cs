@@ -40,7 +40,11 @@ namespace MarketAppTests.Libraries.Screens
 
         public void ClickOnButton(string buttonName)
         {
-            if (buttonName == "Continue") { ContinueButton.Click(); }
+            if (buttonName == "Continue")
+            {
+                do { System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1)); } while (ContinueButton.Displayed is false);
+                ContinueButton.Click();
+            }
             else throw new Exception($"{buttonName} Button not found. Please check Button Name and try again.");
         }
 

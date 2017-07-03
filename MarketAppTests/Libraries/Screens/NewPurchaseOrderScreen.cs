@@ -12,6 +12,8 @@ namespace MarketAppTests.Libraries.Screens
         private WindowsElement NewLineButton => windowsDriver.FindElementByName("New Line");
         private WindowsElement ExpectedRdButton => windowsDriver.FindElementByName("Expected");
         private WindowsElement ReceivedRdButton => windowsDriver.FindElementByName("Received");
+        private WindowsElement MarkReceivedButton => windowsDriver.FindElementByName("Mark Received");
+        private WindowsElement YesButton => windowsDriver.FindElementByName("Yes");
         private WindowsElement DeleteButton => windowsDriver.FindElementByAccessibilityId("DeleteButton");
         private WindowsElement SupplierByCode(string code) => windowsDriver.FindElementByName(code);
         private WindowsElement SupplierText => windowsDriver.FindElementByAccessibilityId("txtAccountSearch");
@@ -56,7 +58,14 @@ namespace MarketAppTests.Libraries.Screens
         {
             if (buttonName == "New Line") { NewLineButton.Click(); }
             else if (buttonName == "Commit") { CommitButton.Click(); }
+            else if (buttonName == "Mark Received") { MarkReceivedButton.Click(); }
+            else if (buttonName == "Yes") { YesButton.Click(); }
             else throw new Exception($"{buttonName} Button not found. Please check Button Name and try again.");
+        }
+
+        public void ClickOnShortCodeLine(int line )
+        {
+            ShortCodeByLine(line).Click();
         }
 
         public string GetShortCodeLineText(int line)

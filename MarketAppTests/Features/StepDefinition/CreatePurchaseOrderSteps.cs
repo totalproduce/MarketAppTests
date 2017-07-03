@@ -86,6 +86,11 @@ namespace MarketAppTests.Features.StepDefinition
             newPurchaseOrderScreen.SelectSupplierByCode(text);
         }
 
+        [When(@"I click on line ""(.*)"" Short Code from Create Purchase Order Screen")]
+        public void WhenIClickOnLineShortCodeFromCreatePurchaseOrderScreen(int line)
+        {
+            newPurchaseOrderScreen.ClickOnShortCodeLine(line);
+        }
 
         [Then(@"I should see ""(.*)"" as Short Code on line ""(.*)"" on Create Purchase Order Screen")]
         public void ThenIShouldSeeAsShortCodeOnLineOnCreatePurchaseOrderScreen(string shortCode, int line)
