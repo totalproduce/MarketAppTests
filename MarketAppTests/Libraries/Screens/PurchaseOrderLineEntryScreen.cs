@@ -13,9 +13,11 @@ namespace MarketAppTests.Libraries.Screens
         private WindowsElement Department => windowsDriver.FindElementByAccessibilityId("cbDepartments");
         private WindowsElement DepartmentByName(string name) => windowsDriver.FindElementByXPath($"//ComboBox[@AutomationId=\'cbDepartments\']/ListItem[@Name=\'{name}\']");
         private WindowsElement ExpectedText => windowsDriver.FindElementByAccessibilityId("txtExpected");
+        private WindowsElement ReceivedText => windowsDriver.FindElementByAccessibilityId("txtReceived");
         private WindowsElement ProductByCode(string code) => windowsDriver.FindElementByName(code);
         private WindowsElement ProductText => windowsDriver.FindElementByAccessibilityId("txtProductCodeSearch");
         private WindowsElement WeightByText(string weight) => windowsDriver.FindElementByXPath($"//List[@AutomationId=\'lstField5\']/ListItem[@Name=\'{weight}\']");
+        private WindowsElement CountryByText(string country) => windowsDriver.FindElementByXPath($"//List[@AutomationId=\'lstField3\']/ListItem[@Name=\'{country}\']");
 
         public PurchaseOrderLineEntryScreen(WindowsDriver<WindowsElement> windowsDriver)
         {
@@ -38,6 +40,11 @@ namespace MarketAppTests.Libraries.Screens
             WeightByText(weight).Click();
         }
 
+        public void SelectCountryByText(string country)
+        {
+            CountryByText(country).Click();
+        }
+
         public void ClickOnButton(string buttonName)
         {
             if (buttonName == "Continue")
@@ -51,6 +58,11 @@ namespace MarketAppTests.Libraries.Screens
         public void EnterExpectedText(string text)
         {
             ExpectedText.SendKeys(text);
+        }
+
+        public void EnterReceivedText(string text)
+        {
+            ReceivedText.SendKeys(text);
         }
 
         public void EnterBuyPriceText(string text)
