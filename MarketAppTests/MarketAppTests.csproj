@@ -85,7 +85,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CreatePurchaseOrder.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\CreditNotes.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CreditNotes.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\StepDefinition\CreatePurchaseOrderSteps.cs" />
+    <Compile Include="Features\StepDefinition\CreditNotesSteps.cs" />
     <Compile Include="Features\StepDefinition\NewTicketCreationSteps.cs" />
     <Compile Include="Features\StepDefinition\CommonSteps.cs" />
     <Compile Include="Features\Support\Hooks.cs" />
@@ -100,6 +106,7 @@
     <Compile Include="Libraries\Screens\ProductSelectionScreen.cs" />
     <Compile Include="Libraries\Screens\PurchaseOrderLineEntryScreen.cs" />
     <Compile Include="Libraries\Screens\SideBar.cs" />
+    <Compile Include="Libraries\Screens\TicketSearchScreen.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -111,6 +118,10 @@
     <None Include="Features\CreatePurchaseOrder.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CreatePurchaseOrder.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\CreditNotes.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CreditNotes.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\NewTicketCreation.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

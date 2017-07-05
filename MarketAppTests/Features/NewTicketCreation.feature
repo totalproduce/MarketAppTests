@@ -3,7 +3,7 @@
 @CreateNewTicket-MultipleLines-CashSale
 Scenario: Create New Ticket - Multiple Lines - Cash Sale
 Given I am a Registered User
-When I click on "Create New Ticket" button from SideBar
+When I click on "Create Ticket" button from SideBar
 And I select the Customer with Id "15999"
 And I add "Test Cash" as a Comment
 And I select "Box" as Type
@@ -46,7 +46,7 @@ And I should see "0.65" as Price on line "4" on Ticket Creation Screen
 @NewTicket-MultipleLine-CreditCustomerSale
 Scenario: New Ticket - Multiple Line - Credit Customer Sale
 Given I am a Registered User
-When I click on "Create New Ticket" button from SideBar
+When I click on "Create Ticket" button from SideBar
 And I select the Customer with Id "15358"
 And I select "Box" as Type
 And I click on "New Line" button from New Ticket Creation Screen
