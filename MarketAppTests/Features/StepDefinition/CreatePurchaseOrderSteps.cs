@@ -92,6 +92,18 @@ namespace MarketAppTests.Features.StepDefinition
             newPurchaseOrderScreen.ClickOnShortCodeLine(line);
         }
 
+        [When(@"I select ""(.*)"" as Country from Purchase Order Line Entry Screen")]
+        public void WhenISelectAsCountryFromPurchaseOrderLineEntryScreen(string country)
+        {
+            purchaseOrderLineEntryScreen.SelectCountryByText(country);
+        }
+
+        [When(@"I enter ""(.*)"" as Received Amount from Purchase Order Line Entry Screen")]
+        public void WhenIEnterAsReceivedAmountFromPurchaseOrderLineEntryScreen(string amount)
+        {
+            purchaseOrderLineEntryScreen.EnterReceivedText(amount);
+        }
+
         [Then(@"I should see ""(.*)"" as Short Code on line ""(.*)"" on Create Purchase Order Screen")]
         public void ThenIShouldSeeAsShortCodeOnLineOnCreatePurchaseOrderScreen(string shortCode, int line)
         {
@@ -114,6 +126,12 @@ namespace MarketAppTests.Features.StepDefinition
         public void ThenIShouldSeeAsExpectedQuantityOnLineOnCreatePurchaseOrderScreen(string expectedQuantity, int line)
         {
             Assert.AreEqual(expectedQuantity, newPurchaseOrderScreen.GetExpectedQuantityLineText(line));
+        }
+
+        [Then(@"I should see ""(.*)"" as Received Quantity on line ""(.*)"" on Create Purchase Order Screen")]
+        public void ThenIShouldSeeAsReceivedQuantityOnLineOnCreatePurchaseOrderScreen(string receivedQuantity, int line)
+        {
+            Assert.AreEqual(receivedQuantity, newPurchaseOrderScreen.GetReceivedQuantityLineText(line));
         }
 
         [Then(@"I should see ""(.*)"" as Buy Price on line ""(.*)"" on Create Purchase Order Screen")]

@@ -231,6 +231,184 @@ testRunner.When("I click on \"Commit\" button from Create Purchase Order Screen"
             this.ScenarioCleanup();
         }
         
+        [TechTalk.SpecRun.ScenarioAttribute("New PO - Multiple Line - Received", new string[] {
+                "NewPO-MultipleLine-Received"}, SourceLine=79)]
+        public virtual void NewPO_MultipleLine_Received()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("New PO - Multiple Line - Received", new string[] {
+                        "NewPO-MultipleLine-Received"});
+#line 80
+this.ScenarioSetup(scenarioInfo);
+#line 81
+testRunner.Given("I am a Registered User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 82
+testRunner.When("I click on \"Create Purchase Order\" button from SideBar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 83
+testRunner.And("I select \"Received\" as Status from Create Purchase Order Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 84
+testRunner.And("I select the Supplier with Id \"18046\" from Create Purchase Order Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 85
+testRunner.And("I click on \"New Line\" button from Create Purchase Order Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 86
+testRunner.And("I search for Product with code \"CAPM\" from Purchase Order Line Entry Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 87
+testRunner.And("I select \"ISRAEL\" as Country from Purchase Order Line Entry Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 88
+testRunner.And("I click on \"Continue\" button from Purchase Order Line Entry Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 89
+testRunner.And("I enter \"100\" as Received Amount from Purchase Order Line Entry Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 90
+testRunner.And("I enter \"8.00\" as Buy Price from Purchase Order Line Entry Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 91
+testRunner.And("I select \"VEGETABLES\" as Department from Purchase Order Line Entry Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 92
+testRunner.And("I click on \"Continue\" button from Purchase Order Line Entry Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 93
+testRunner.Then("I should see \"CAPM\" as Short Code on line \"1\" on Create Purchase Order Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 94
+testRunner.And("I should see \"MIXED CAPSICUM\" as Short Description on line \"1\" on Create Purchase" +
+                    " Order Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 95
+testRunner.And("I should see \"1541\" as Product Code on line \"1\" on Create Purchase Order Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 96
+testRunner.And("I should see \"100\" as Expected Quantity on line \"1\" on Create Purchase Order Scre" +
+                    "en", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 97
+testRunner.And("I should see \"8.00\" as Buy Price on line \"1\" on Create Purchase Order Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 98
+testRunner.And("I should see \"Goods Invoice\" as Type on line \"1\" on Create Purchase Order Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 99
+testRunner.And("I should see \"VEGETABLES\" as Department on line \"1\" on Create Purchase Order Scre" +
+                    "en", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 100
+testRunner.When("I change the Supplier for the one with Id \"22091\" from Create Purchase Order Scre" +
+                    "en", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 101
+testRunner.And("I click on line \"1\" Short Code from Create Purchase Order Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 102
+testRunner.And("I click on \"Continue\" button from Purchase Order Line Entry Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 103
+testRunner.And("I enter \"120\" as Expected amount from Purchase Order Line Entry Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 104
+testRunner.And("I click on \"Continue\" button from Purchase Order Line Entry Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 105
+testRunner.Then("I should see \"100\" as Expected Quantity on line \"1\" on Create Purchase Order Scre" +
+                    "en", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 106
+testRunner.And("I should see \"120\" as Received Quantity on line \"1\" on Create Purchase Order Scre" +
+                    "en", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 107
+testRunner.When("I click on \"New Line\" button from Create Purchase Order Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 108
+testRunner.And("I search for Product with code \"AVO\" from Purchase Order Line Entry Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 109
+testRunner.And("I select \"12KG\" as Weight from Purchase Order Line Entry Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 110
+testRunner.And("I click on \"Continue\" button from Purchase Order Line Entry Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 111
+testRunner.And("I enter \"250\" as Expected amount from Purchase Order Line Entry Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 112
+testRunner.And("I enter \"8.50\" as Buy Price from Purchase Order Line Entry Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 113
+testRunner.And("I select \"FRUIT\" as Department from Purchase Order Line Entry Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 114
+testRunner.And("I click on \"Continue\" button from Purchase Order Line Entry Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 115
+testRunner.And("I click on \"New Line\" button from Create Purchase Order Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 116
+testRunner.And("I search for Product with code \"ORA\" from Purchase Order Line Entry Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 117
+testRunner.And("I select \"20KG\" as Weight from Purchase Order Line Entry Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 118
+testRunner.And("I click on \"Continue\" button from Purchase Order Line Entry Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 119
+testRunner.And("I enter \"300\" as Expected amount from Purchase Order Line Entry Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 120
+testRunner.And("I enter \"3.00\" as Buy Price from Purchase Order Line Entry Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 121
+testRunner.And("I select \"CITRUS\" as Department from Purchase Order Line Entry Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 122
+testRunner.And("I click on \"Continue\" button from Purchase Order Line Entry Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 123
+testRunner.And("I click on \"New Line\" button from Create Purchase Order Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 124
+testRunner.And("I search for Product with code \"CABSAV\" from Purchase Order Line Entry Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 125
+testRunner.And("I select \"2KG\" as Weight from Purchase Order Line Entry Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 126
+testRunner.And("I click on \"Continue\" button from Purchase Order Line Entry Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 127
+testRunner.And("I enter \"275\" as Expected amount from Purchase Order Line Entry Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 128
+testRunner.And("I enter \"8\" as Buy Price from Purchase Order Line Entry Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 129
+testRunner.And("I select \"VEGETABLES\" as Department from Purchase Order Line Entry Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 130
+testRunner.And("I click on \"Continue\" button from Purchase Order Line Entry Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 131
+testRunner.Then("I should see \"AVO\" as Short Code on line \"2\" on Create Purchase Order Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 132
+testRunner.And("I should see \"AVOCADO\" as Short Description on line \"2\" on Create Purchase Order " +
+                    "Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 133
+testRunner.And("I should see \"1233\" as Product Code on line \"2\" on Create Purchase Order Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 134
+testRunner.And("I should see \"250\" as Expected Quantity on line \"2\" on Create Purchase Order Scre" +
+                    "en", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 135
+testRunner.And("I should see \"250\" as Received Quantity on line \"2\" on Create Purchase Order Scre" +
+                    "en", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 136
+testRunner.And("I should see \"8.50\" as Buy Price on line \"2\" on Create Purchase Order Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 137
+testRunner.And("I should see \"Goods Invoice\" as Type on line \"2\" on Create Purchase Order Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 138
+testRunner.And("I should see \"FRUIT\" as Department on line \"2\" on Create Purchase Order Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 139
+testRunner.And("I should see \"ORA\" as Short Code on line \"3\" on Create Purchase Order Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 140
+testRunner.And("I should see \"ORANGE\" as Short Description on line \"3\" on Create Purchase Order S" +
+                    "creen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 141
+testRunner.And("I should see \"11534\" as Product Code on line \"3\" on Create Purchase Order Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 142
+testRunner.And("I should see \"300\" as Expected Quantity on line \"3\" on Create Purchase Order Scre" +
+                    "en", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 143
+testRunner.And("I should see \"300\" as Received Quantity on line \"3\" on Create Purchase Order Scre" +
+                    "en", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 144
+testRunner.And("I should see \"3.00\" as Buy Price on line \"3\" on Create Purchase Order Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 145
+testRunner.And("I should see \"Goods Invoice\" as Type on line \"3\" on Create Purchase Order Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 146
+testRunner.And("I should see \"CITRUS\" as Department on line \"3\" on Create Purchase Order Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 147
+testRunner.Then("I should see \"CABSAV\" as Short Code on line \"4\" on Create Purchase Order Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 148
+testRunner.And("I should see \"SAVOY CABBAGE\" as Short Description on line \"4\" on Create Purchase " +
+                    "Order Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 149
+testRunner.And("I should see \"25546\" as Product Code on line \"4\" on Create Purchase Order Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 150
+testRunner.And("I should see \"275\" as Expected Quantity on line \"4\" on Create Purchase Order Scre" +
+                    "en", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 151
+testRunner.And("I should see \"275\" as Received Quantity on line \"4\" on Create Purchase Order Scre" +
+                    "en", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 152
+testRunner.And("I should see \"8.00\" as Buy Price on line \"4\" on Create Purchase Order Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 153
+testRunner.And("I should see \"Goods Invoice\" as Type on line \"4\" on Create Purchase Order Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 154
+testRunner.And("I should see \"VEGETABLES\" as Department on line \"4\" on Create Purchase Order Scre" +
+                    "en", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 155
+testRunner.When("I click on \"Commit\" button from Create Purchase Order Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
         [TechTalk.SpecRun.TestRunCleanup()]
         public virtual void TestRunCleanup()
         {

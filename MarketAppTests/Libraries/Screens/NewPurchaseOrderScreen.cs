@@ -21,6 +21,7 @@ namespace MarketAppTests.Libraries.Screens
         private WindowsElement ShortDescriptionByLine(int line) => windowsDriver.FindElementByXPath($"//List[@AutomationId=\'lstSearchResults\']/ListItem[@ClassName=\'ListViewItem\'][{line}]/*[@ClassName=\'TextBlock\'][1]");
         private WindowsElement ProductCodeByLine(int line) => windowsDriver.FindElementByXPath($"//List[@AutomationId=\'lstSearchResults\']/ListItem[@ClassName=\'ListViewItem\'][{line}]/*[@ClassName=\'TextBlock\'][2]");
         private WindowsElement ExpectedQuantityByLine(int line) => windowsDriver.FindElementByXPath($"//List[@AutomationId=\'lstSearchResults\']/ListItem[@ClassName=\'ListViewItem\'][{line}]/*[@ClassName=\'TextBlock\'][4]");
+        private WindowsElement ReceivedQuantityByLine(int line) => windowsDriver.FindElementByXPath($"//List[@AutomationId=\'lstSearchResults\']/ListItem[@ClassName=\'ListViewItem\'][{line}]/*[@ClassName=\'TextBlock\'][5]");
         private WindowsElement BuyPriceByLine(int line) => windowsDriver.FindElementByXPath($"//List[@AutomationId=\'lstSearchResults\']/ListItem[@ClassName=\'ListViewItem\'][{line}]/*[@ClassName=\'TextBlock\'][9]");
         private WindowsElement TypeByLine(int line) => windowsDriver.FindElementByXPath($"//List[@AutomationId=\'lstSearchResults\']/ListItem[@ClassName=\'ListViewItem\'][{line}]/*[@ClassName=\'TextBlock\'][13]");
         private WindowsElement DepartmentByLine(int line) => windowsDriver.FindElementByXPath($"//List[@AutomationId=\'lstSearchResults\']/ListItem[@ClassName=\'ListViewItem\'][{line}]/*[@ClassName=\'TextBlock\'][14]");
@@ -87,6 +88,11 @@ namespace MarketAppTests.Libraries.Screens
         public string GetExpectedQuantityLineText(int line)
         {
             return ExpectedQuantityByLine(line).Text;
+        }
+
+        public string GetReceivedQuantityLineText(int line)
+        {
+            return ReceivedQuantityByLine(line).Text;
         }
 
         public string GetBuyPriceLineText(int line)
