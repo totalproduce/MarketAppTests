@@ -74,7 +74,13 @@ testRunner.Given("I am a Registered User", ((string)(null)), ((TechTalk.SpecFlow
 #line 6
 testRunner.When("I click on \"Ticket Search\" button from SideBar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 7
-testRunner.And("I click on \"Search\" button from Ticket Search Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I enter \"960829\" as Ticket Number on Ticket Search Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 8
+testRunner.And("I click on \"Search\" button on Ticket Search Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 9
+testRunner.And("I select the ticket from the Search Results on Ticket Search Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 10
+testRunner.And("I click on \"Credit\" button from New Ticket Creation Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }

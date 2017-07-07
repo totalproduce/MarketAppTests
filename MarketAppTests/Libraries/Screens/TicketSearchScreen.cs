@@ -8,7 +8,9 @@ namespace MarketAppTests.Libraries.Screens
     {
         private WindowsDriver<WindowsElement> windowsDriver;
 
-        private WindowsElement SearchButton => windowsDriver.FindElementByName("Search");
+        private WindowsElement TicketNumberText => windowsDriver.FindElementByAccessibilityId("txtTicketNumber");
+        private WindowsElement SearchButton => windowsDriver.FindElementByXPath("//Text[@Name=\'Search\']");
+        private WindowsElement TicketNumberByLine(int line) => windowsDriver.FindElementByXPath($"//List[@AutomationId=\'lstSearchResults\']/ListItem[@ClassName=\'ListViewItem\'][{line}]/*[@ClassName=\'Hyperlink\']");
 
         public TicketSearchScreen(WindowsDriver<WindowsElement> windowsDriver)
         {
@@ -19,6 +21,17 @@ namespace MarketAppTests.Libraries.Screens
         {
             if (buttonName == "Search") { SearchButton.Click(); }
             else throw new Exception($"{buttonName} Button not found. Please check Button Name and try again.");
+        }
+
+        public void EnterTicketNumberText(string text)
+        {
+            TicketNumberText.SendKeys(text);
+        }
+
+        public void SelectTicketNumberFromSearchResults()
+        {
+            do { System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1)); } while (TicketNumberByLine(1).Enabled is false);
+            TicketNumberByLine(1).Click();
         }
     }
 }

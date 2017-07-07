@@ -28,14 +28,14 @@ namespace MarketAppTests.Libraries.Screens
 
         public void LoginWithDefaultUser()
         {
-            SalesOffice.Click();
-            DefaultSalesOffice.Click();
-            Username.Click();
-            DefaultUsername.Click();
-            Salesman.Click();
-            DefaultSalesman.Click();
+            //SalesOffice.Click();
+            //DefaultSalesOffice.Click();
+            //Username.Click();
+            //DefaultUsername.Click();
+            //Salesman.Click();
+            //DefaultSalesman.Click();
             Pin.SendKeys(DefaultPin);
-            RollbackWeeks.SendKeys(DefaultRollbackWeeks);
+            //RollbackWeeks.SendKeys(DefaultRollbackWeeks);
             Login.Click();
         }
     }

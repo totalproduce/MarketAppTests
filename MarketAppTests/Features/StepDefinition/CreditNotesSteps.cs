@@ -1,7 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using MarketAppTests.Libraries.Screens;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OpenQA.Selenium.Appium.Windows;
+using OpenQA.Selenium.Appium.PageObjects;
+using System;
 using TechTalk.SpecFlow;
 
 namespace MarketAppTests.Features.StepDefinition
@@ -9,34 +10,34 @@ namespace MarketAppTests.Features.StepDefinition
     [Binding]
     public sealed class CreditNotesSteps
     {
-        // For additional details on SpecFlow step definitions see http://go.specflow.org/doc-stepdef
+        private WindowsDriver<WindowsElement> windowsDriver;
 
-        [Given("I have entered (.*) into the calculator")]
-        public void GivenIHaveEnteredSomethingIntoTheCalculator(int number)
+        private TicketSearchScreen ticketSearchScreen;
+        private NewTicketCreationScreen newTicketCreationScreen;
+
+        public CreditNotesSteps(WindowsDriver<WindowsElement> windowsDriver)
         {
-            //TODO: implement arrange (precondition) logic
-            // For storing and retrieving scenario-specific data see http://go.specflow.org/doc-sharingdata 
-            // To use the multiline text or the table argument of the scenario,
-            // additional string/Table parameters can be defined on the step definition
-            // method. 
-
-            ScenarioContext.Current.Pending();
+            this.windowsDriver = windowsDriver;
+            ticketSearchScreen = new TicketSearchScreen(this.windowsDriver);
         }
 
-        [When("I press add")]
-        public void WhenIPressAdd()
+        [When(@"I enter ""(.*)"" as Ticket Number on Ticket Search Screen")]
+        public void WhenIEnterAsTicketNumberOnTicketSearchScreen(string text)
         {
-            //TODO: implement act (action) logic
-
-            ScenarioContext.Current.Pending();
+            ticketSearchScreen.EnterTicketNumberText(text);
         }
 
-        [Then("the result should be (.*) on the screen")]
-        public void ThenTheResultShouldBe(int result)
+        [When(@"I click on ""(.*)"" button on Ticket Search Screen")]
+        public void WhenIClickOnButtonFromTicketSearchScreen(string buttonName)
         {
-            //TODO: implement assert (verification) logic
+            ticketSearchScreen.ClickOnButton(buttonName);
+        }
 
-            ScenarioContext.Current.Pending();
+        [When(@"I select the ticket from the Search Results on Ticket Search Screen")]
+        public void WhenISelectTheTicketFromTheSearchResultsOnTicketSearchScreen()
+        {
+            ticketSearchScreen.SelectTicketNumberFromSearchResults();
+            newTicketCreationScreen = new NewTicketCreationScreen(this.windowsDriver);
         }
     }
 }
